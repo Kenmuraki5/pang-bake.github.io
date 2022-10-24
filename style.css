@@ -2,10 +2,8 @@
   max-height: 760px;
 }
 @media screen and (max-width:620) {
-  .row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .card{
+    width: auto;
   }
 }
 
