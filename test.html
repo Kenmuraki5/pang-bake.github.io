@@ -91,46 +91,11 @@
   <div class="container mt-5">
     <!-- ส่วนของเมนูขายดี -->
     <h3>Best seller</h3>
-    <div class="row one"></div>
+    <div class="row bestseller"></div>
 
     <!-- ส่วนของเมนูใหม่ -->
     <h3 style="margin-top: 30px;">New</h3>
-    <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="card mt-4">
-          <img class="card-img-top"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-xbbtOjenth-o4vYlvVB_CUXp40wW3CF2pg&usqp=CAU"
-            alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Cake chocolate</h5>
-            <a href="#" class="btn btn-primary">Add to cart</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card mt-4">
-          <img class="card-img-top"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-xbbtOjenth-o4vYlvVB_CUXp40wW3CF2pg&usqp=CAU"
-            alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Cake chocolate</h5>
-            <a href="#" class="btn btn-primary">Add to cart</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="card mt-4">
-          <img class="card-img-top"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-xbbtOjenth-o4vYlvVB_CUXp40wW3CF2pg&usqp=CAU"
-            alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Cake chocolate</h5>
-            <div class="text-right">
-              <a href="#" class="btn btn-primary">Add to cart</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="row newmenu">
     </div>
   </div>
 
@@ -189,7 +154,7 @@
       .then(response => response.json())
       .then(data => {
         for (var i = 0; i < data.bestsell.length; i++) {
-          document.querySelector(".one").innerHTML += `
+          document.querySelector(".bestseller").innerHTML += `
           <div class="col-lg-4 col-md-6">
             <div class="card mt-4">
               <img id="card-img-top" src="${data.bestsell[i].picture}" alt="Card image cap">
@@ -197,6 +162,22 @@
                 <h4 class="card-title">${data.bestsell[i].name}</h4>
                 <div class="d-flex justify-content-between">
                   <h5>${data.bestsell[i].price} ฿</h5>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          `;
+        }
+        for (var i = 0; i < data.new.length; i++) {
+          document.querySelector(".newmenu").innerHTML += `
+          <div class="col-lg-4 col-md-6">
+            <div class="card mt-4" style="width:300px;">
+              <img id="card-img-top2" src="${data.new[i].picture}" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">${data.new[i].name}</h4>
+                <div class="d-flex justify-content-between">
+                  <h5>${data.new[i].price} ฿</h5>
                   <a href="#" class="btn btn-primary">Add to cart</a>
                 </div>
               </div>

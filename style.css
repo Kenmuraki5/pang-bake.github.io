@@ -9,7 +9,11 @@
 .btn-primary{
   text-align: right;
 }
-
+#card-img-top2{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
 .site-footer
 {
   background-color:#26272b;
