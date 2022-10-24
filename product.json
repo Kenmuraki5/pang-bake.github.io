@@ -1,0 +1,19 @@
+{
+    "bestsell": [
+        {
+            "name": "CupCake",
+            "price":"350",
+            "picture": "https://www.noracooks.com/wp-content/uploads/2022/03/sq-3.jpg"
+        },
+        {
+            "name": "Chocolate Cake",
+            "price":"350",
+            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-xbbtOjenth-o4vYlvVB_CUXp40wW3CF2pg&usqp=CAU"
+        },
+        {
+            "name": "Crepe Cake",
+            "price":"350",
+            "picture": "https://annabanana.co/wp-content/uploads/2020/01/Chocolate-Crepe-Cake-Feat-1.jpg"
+        }
+    ]
+} 

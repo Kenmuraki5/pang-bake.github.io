@@ -6,6 +6,9 @@
     width: auto;
   }
 }
+.btn-primary{
+  text-align: right;
+}
 
 .site-footer
 {
