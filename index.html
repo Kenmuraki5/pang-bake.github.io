@@ -162,7 +162,7 @@
         for (var i = 0; i < data.bestsell.length; i++) {
           document.querySelector(".bestseller").innerHTML += `
           <div class="col-lg-3 col-md-6 col-sm-6" style="display:flex; justify-content: center;">
-            <div class="card mt-4 ca-1">
+            <div class="card mt-4 ca-1" style="width: 18rem;">
               <img id="card-img-top" src="${data.bestsell[i].picture}" alt="Card image cap">
               <div class="card-body">
                 <h4 class="card-title">${data.bestsell[i].name}</h4>
@@ -178,7 +178,7 @@
         for (var i = 0; i < data.new.length; i++) {
           document.querySelector(".newmenu").innerHTML += `
           <div class="col-lg-4 col-md-6" style="display:flex; justify-content: center;">
-            <div class="card mt-4 ca-2">
+            <div class="card mt-4 ca-2" style="width: 18rem;">
               <img id="card-img-top" src="${data.new[i].picture}" width="100%" height="300px" alt="Card image cap">
               <div class="card-body">
                 <h4 class="card-title">${data.new[i].name}</h4>
