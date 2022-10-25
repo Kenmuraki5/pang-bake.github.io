@@ -161,8 +161,8 @@
       .then(data => {
         for (var i = 0; i < data.bestsell.length; i++) {
           document.querySelector(".bestseller").innerHTML += `
-          <div class="col-lg-4 col-md-6 col-sm-6" style="display:flex; justify-content: center;">
-            <div class="card mt-4 ca-1" style="width: 18rem;">
+          <div class="col-lg-3 col-md-6 col-sm-6" style="display:flex; justify-content: center;">
+            <div class="card mt-4 ca-1" style="width: 19rem;">
               <img id="card-img-top" src="${data.bestsell[i].picture}" alt="Card image cap">
               <div class="card-body">
                 <h4 class="card-title">${data.bestsell[i].name}</h4>
