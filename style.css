@@ -4,10 +4,10 @@
 .ca-2{
   width: 70%;
 }
-.fa-shopping-cart, .nav-item{
+.fa-shopping-cart{
   transition:all .2s;
 }
-.fa-shopping-cart, .nav-item:hover{
+.fa-shopping-cart:hover{
   transform: scale(1.2);
 }
 .site-footer
