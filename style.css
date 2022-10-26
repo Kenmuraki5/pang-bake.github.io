@@ -4,18 +4,12 @@
 .ca-2{
   width: 70%;
 }
-.fa-shopping-cart{
+.fa-shopping-cart, .nav-item{
   transition:all .2s;
-  color:black;
 }
-.fa-shopping-cart:hover{
+.fa-shopping-cart, .nav-item:hover{
   transform: scale(1.2);
 }
-
-
-
-
-
 .site-footer
 {
   background-color:#26272b;
