@@ -163,14 +163,14 @@
       .then(data => {
         for (var i = 0; i < data.bestsell.length; i++) {
           document.querySelector(".bestseller").innerHTML += `
-          <div class="col-lg-3 col-md-6 col-sm-6 b" style="display:flex; justify-content: center;" onclick="openlist()">
+          <div class="col-lg-3 col-md-6 col-sm-6 b" style="display:flex; justify-content: center;">
             <div class="card mt-4 ca-1" style="width: 19rem;">
               <img id="card-img-top${i}" src="${data.bestsell[i].picture}" alt="Card image cap">
               <div class="card-body">
                 <h4 class="card-title">${data.bestsell[i].name}</h4>
                 <div class="d-flex justify-content-between">
-                  <h5>${data.bestsell[i].price} ฿</h5>
-                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <h5 class="priceValue">${data.bestsell[i].price} ฿</h5>
+                  <button onclick="savemylist()" class="btn btn-primary">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -185,8 +185,8 @@
               <div class="card-body">
                 <h4 class="card-title">${data.new[i].name}</h4>
                 <div class="d-flex justify-content-between">
-                  <h5>${data.new[i].price} ฿</h5>
-                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <h5 class="priceValue">${data.new[i].price} ฿</h5>
+                  <button onclick="savemylist()" class="btn btn-primary">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -203,9 +203,14 @@
     //     })
     //   })
     // })
-    function openlist(){
-      alert($(this).attr('id')).setAttribute("src", "image2.jpeg")
-    }
+    // function savemylist(){
+    //   let product = [{
+    //     productname : document.querySelector(".card-title").innerHTML,
+    //     productprice : parseInt(document.querySelector(".priceValue").innerHTML.replace("฿","")),
+    //     productamount : 1,
+    //   }];
+    //   localStorage.setItem('productlist', JSON.stringify(product));
+    // }
   </script>
 </body>
 
