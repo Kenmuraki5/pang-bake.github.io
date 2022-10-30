@@ -184,9 +184,14 @@ a {
 
 
 
-
+.login{
+  margin-right: 10px;
+}
 .fa-shopping-cart{
   transition:all .2s;
+  position: absolute;
+  top: 20px;
+  right: 10px;
 }
 .fa-shopping-cart:hover{
   transform: scale(1.2);
