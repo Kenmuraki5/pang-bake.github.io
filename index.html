@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="src/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <title>Document</title>
 </head>
 
@@ -47,6 +48,8 @@
       <div id="change">
         <a href="#" style="text-decoration:none; color:black; padding-right: 10px;">login</button>
         <a href="#" style="font-size:20px; text-decoration:none; color:black;" class="fa fa-shopping-cart"></a>
+        <div id="cartAmount" class="cartAmount">0</div>
+      </div>
       </div>
     </div>
   </nav>
@@ -94,21 +97,13 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <div class="container mt-5">
-      <p>Home</p>
-      <!-- ส่วนของเมนูขายดี -->
-      <h3>Best seller</h3>
-      <div class="row bestseller">
-      </div>
+  <div class="container">
+    <h3 class="mt-5">Best Seller</h3>
+    <div class="shop" id="shop">
 
-      <!-- ส่วนของเมนูใหม่ -->
-      <h3 style="margin-top: 30px;">New</h3>
-      <div class="row newmenu"></div>
+
     </div>
   </div>
-
-
-
   <footer class="site-footer mt-5">
     <div class="container">
       <div class="row">
@@ -157,61 +152,9 @@
       </div>
     </div>
   </footer>
-  <script>
-    fetch("product.json")
-      .then(response => response.json())
-      .then(data => {
-        for (var i = 0; i < data.bestsell.length; i++) {
-          document.querySelector(".bestseller").innerHTML += `
-          <div class="col-lg-3 col-md-6 col-sm-6 b" style="display:flex; justify-content: center;">
-            <div class="card mt-4 ca-1" style="width: 19rem;">
-              <img id="card-img-top${i}" src="${data.bestsell[i].picture}" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title">${data.bestsell[i].name}</h4>
-                <div class="d-flex justify-content-between">
-                  <h5 class="priceValue">${data.bestsell[i].price} ฿</h5>
-                  <button onclick="savemylist()" class="btn btn-primary">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          `;
-        }
-        for (var i = 0; i < data.new.length; i++) {
-          document.querySelector(".newmenu").innerHTML += `
-          <div class="col-lg-4 col-md-6" style="display:flex; justify-content: center;">
-            <div class="card mt-4 ca-2" style="width: 18rem;">
-              <img id="card-img-top" src="${data.new[i].picture}" width="100%" height="300px" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title">${data.new[i].name}</h4>
-                <div class="d-flex justify-content-between">
-                  <h5 class="priceValue">${data.new[i].price} ฿</h5>
-                  <button onclick="savemylist()" class="btn btn-primary">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          `;
-        }
-      })
-    // $(function () {
-    //   $("#change").delegate('a', 'click', function(e){
-    //     e.preventDefault();
-    //     var link = this.href;
-    //     $.get(link, function(res){
-    //       $('#all').html(res);
-    //     })
-    //   })
-    // })
-    // function savemylist(){
-    //   let product = [{
-    //     productname : document.querySelector(".card-title").innerHTML,
-    //     productprice : parseInt(document.querySelector(".priceValue").innerHTML.replace("฿","")),
-    //     productamount : 1,
-    //   }];
-    //   localStorage.setItem('productlist', JSON.stringify(product));
-    // }
-  </script>
+
 </body>
+<script src="src/Data.js"></script>
+<script src="src/main.js"></script>
 
 </html>
