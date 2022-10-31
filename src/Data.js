@@ -1,4 +1,4 @@
-let BestSeller = [
+let shopItemsData = [
   {
     id: "Best1",
     name: "Cup Cake",
