@@ -42,11 +42,10 @@ let generatenew = () => {
           <div class="price-quantity">
             <h2>$ ${price} </h2>
             <div class="buttons">
-              <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-              <div id=${id} class="quantity">
+              <div id=${id} class="quantity" style="display:none;">
               ${search.item === undefined ? 0 : search.item}
               </div>
-              <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+              <i class="btn btn-primary" onclick="increment(${id})" class="bi bi-plus-lg">add to cart</i>
             </div>
           </div>
         </div>
@@ -76,20 +75,22 @@ let increment = (id) => {
   update(selectedItem.id);
   localStorage.setItem("data", JSON.stringify(basket));
 };
-let decrement = (id) => {
-  let selectedItem = id;
-  let search = basket.find((x) => x.id === selectedItem.id);
 
-  if (search === undefined) return;
-  else if (search.item === 0) return;
-  else {
-    search.item -= 1;
-  }
-  update(selectedItem.id);
-  basket = basket.filter((x) => x.item !== 0);
-  // console.log(basket);
-  localStorage.setItem("data", JSON.stringify(basket));
-};
+// การลบสินค้า
+// let decrement = (id) => {
+//   let selectedItem = id;
+//   let search = basket.find((x) => x.id === selectedItem.id);
+
+//   if (search === undefined) return;
+//   else if (search.item === 0) return;
+//   else {
+//     search.item -= 1;
+//   }
+//   update(selectedItem.id);
+//   basket = basket.filter((x) => x.item !== 0);
+//   // console.log(basket);
+//   localStorage.setItem("data", JSON.stringify(basket));
+// };
 let update = (id) => {
   let search = basket.find((x) => x.id === id);
   // console.log(search.item);
