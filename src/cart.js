@@ -15,7 +15,7 @@ let generateCartItems = () => {
     return (ShoppingCart.innerHTML = basket
       .map((x) => {
         let { id, item } = x;
-        let search = shopItemsData.find((y) => y.id === id) || neww.find((x) => x.id === id) ||[];
+        let search = Bestseller.find((y) => y.id === id) || neww.find((x) => x.id === id) ||[];
         return `
       <div class="cart-item">
         <img width="100" src=${search.img} alt="" />
@@ -114,7 +114,7 @@ let TotalAmount = () => {
     let amount = basket
       .map((x) => {
         let { item, id } = x;
-        let search = shopItemsData.find((y) => y.id === id) || neww.find((x) => x.id === id) ||[];
+        let search = Bestseller.find((y) => y.id === id) || neww.find((x) => x.id === id) ||[];
 
         return item * search.price;
       })

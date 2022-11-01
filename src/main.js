@@ -3,7 +3,7 @@ let shop2 = document.getElementById("new");
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateShop = () => {
-  return (shop.innerHTML = shopItemsData
+  return (shop.innerHTML = Bestseller
     .map((x) => {
       let { id, name, price, desc, img } = x;
       let search = basket.find((x) => x.id === id) || [];
