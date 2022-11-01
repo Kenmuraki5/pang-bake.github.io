@@ -4,7 +4,7 @@ let cake3 = document.getElementById("new");
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generatebutttercake = () => {
-  return (cake1.innerHTML = Bestseller
+  return (cake1.innerHTML = ButterCake
     .map((x) => {
       let { id, name, price, desc, img } = x;
       let search = basket.find((x) => x.id === id) || [];
@@ -29,37 +29,37 @@ let generatebutttercake = () => {
     })
     .join(""));
 };
-// let generatebutttercake2 = () => {
-//     return (document.getElementById("ButterCake2").innerHTML = neww
-//       .map((x) => {
-//         let { id, name, price, desc, img } = x;
-//         let search = basket.find((x) => x.id === id) || [];
-//         return `
-//         <div id=product-id-${id} class="item">
-//           <img width="220" src=${img} alt="">
-//           <div class="details">
-//             <h3>${name}</h3>
-//             <p>${desc}</p>
-//             <div class="price-quantity">
-//               <h2>$ ${price} </h2>
-//               <div class="buttons">
-//                 <div id=${id} class="quantity" style="display:none;">
-//                 ${search.item === undefined ? 0 : search.item}
-//                 </div>
-//                 <i class="btn btn-primary" onclick="increment(${id})" class="bi bi-plus-lg">add to cart</i>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       `;
-//       })
-//       .join(""));
-//   };
+let generatebutttercake2 = () => {
+    return (document.getElementById("ButterCake2").innerHTML = ButterCake2
+      .map((x) => {
+        let { id, name, price, desc, img } = x;
+        let search = basket.find((x) => x.id === id) || [];
+        return `
+        <div id=product-id-${id} class="item">
+          <img width="220" src=${img} alt="">
+          <div class="details">
+            <h3>${name}</h3>
+            <p>${desc}</p>
+            <div class="price-quantity">
+              <h2>$ ${price} </h2>
+              <div class="buttons">
+                <div id=${id} class="quantity" style="display:none;">
+                ${search.item === undefined ? 0 : search.item}
+                </div>
+                <i class="btn btn-primary" onclick="increment(${id})" class="bi bi-plus-lg">add to cart</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      })
+      .join(""));
+  };
 
 
 
 let generateicescreamcake = () => {
-  return (cake2.innerHTML = neww
+  return (cake2.innerHTML = icecreamecake
     .map((x) => {
       let { id, name, price, desc, img } = x;
       let search = basket.find((x) => x.id === id) || [];
@@ -84,37 +84,37 @@ let generateicescreamcake = () => {
     })
     .join(""));
 };
-// let generateicescreamcake2 = () => {
-//     return (document.getElementById("icecreamecake2").innerHTML = Bestseller
-//       .map((x) => {
-//         let { id, name, price, desc, img } = x;
-//         let search = basket.find((x) => x.id === id) || [];
-//         return `
-//         <div id=product-id-${id} class="item">
-//           <img width="220" src=${img} alt="">
-//           <div class="details">
-//             <h3>${name}</h3>
-//             <p>${desc}</p>
-//             <div class="price-quantity">
-//               <h2>$ ${price} </h2>
-//               <div class="buttons">
-//                 <div id=${id} class="quantity" style="display:none;">
-//                 ${search.item === undefined ? 0 : search.item}
-//                 </div>
-//                 <i class="btn btn-primary" onclick="increment(${id})" class="bi bi-plus-lg">add to cart</i>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       `;
-//       })
-//       .join(""));
-//   };
+let generateicescreamcake2 = () => {
+    return (document.getElementById("icecreamecake2").innerHTML = icecreamecake2
+      .map((x) => {
+        let { id, name, price, desc, img } = x;
+        let search = basket.find((x) => x.id === id) || [];
+        return `
+        <div id=product-id-${id} class="item">
+          <img width="220" src=${img} alt="">
+          <div class="details">
+            <h3>${name}</h3>
+            <p>${desc}</p>
+            <div class="price-quantity">
+              <h2>$ ${price} </h2>
+              <div class="buttons">
+                <div id=${id} class="quantity" style="display:none;">
+                ${search.item === undefined ? 0 : search.item}
+                </div>
+                <i class="btn btn-primary" onclick="increment(${id})" class="bi bi-plus-lg">add to cart</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      })
+      .join(""));
+  };
 
 generatebutttercake();
-// generatebutttercake2();
+generatebutttercake2();
 generateicescreamcake();
-// generateicescreamcake2();
+generateicescreamcake2();
 
 let increment = (id) => {
   let selectedItem = id;

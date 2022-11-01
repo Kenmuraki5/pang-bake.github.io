@@ -34,6 +34,12 @@ a {
   padding: 25px 60px;
   margin-bottom: 30px;
 }
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+
+
 .cart {
   position: relative;
   background-color: #fff;
