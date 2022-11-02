@@ -70,17 +70,18 @@ a {
   gap: 30px;
   justify-content: center;
   margin-top: 50px;
+  overflow: scroll;
 }
 
 @media (max-width: 1000px) {
   .shop {
-    grid-template-columns: repeat(2, 223px);
+    justify-content: left;
   }
 }
 
 @media (max-width: 500px) {
   .shop {
-    grid-template-columns: repeat(1, 223px);
+    justify-content: left;
   }
 }
 
