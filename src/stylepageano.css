@@ -70,7 +70,7 @@
     gap: 30px;
     justify-content: center;
     margin-top: 50px;
-    overflow-x: scroll;
+    overflow: scroll;
   }
   
   @media (max-width: 1000px) {
