@@ -11,33 +11,9 @@
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
-<style>
-    form{
-        margin: 10px;
-    }
-</style>
 <body>
-    <div class="container">
-        <form method="POST">
-            <h2>Register</h2>
-            <label>Name:</label>
-            <input type="text" name="Name" required>
-            <label>Surname</label>
-            <input type="text" name="Surname" required><br><br>
-            <label>Username</label>
-            <input type="text" name="Username" required><br><br>
-            <label>Password</label>
-            <input type="password" name="Password" required><br><br>
-            <label>Confirm Password</label>
-            <input type="password" name="Password_2" required><br><br>
-            <label>Address:</label>
-            <textarea rows="3" cols="30" name="Address" required></textarea><br><br>
-            <input type="submit" name="SUBMIT" value="Submit" class="btn btn-dark">
-            <p>Already a member? <a href="login.php">Sign In</a></p>
-        </form>
-    </div>
-    
-    <?php
+</body>
+<?php
     session_start();
 
     class MyDB extends SQLite3 {
@@ -74,7 +50,5 @@
      $db->close();
      
 
-    ?>
-    
-</body>
+?>
 </html>

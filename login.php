@@ -12,25 +12,14 @@
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
-<body>
 <style>
     form{
         margin: 10px;
     }
 </style>
 <body>
-    <div class="container">
-        <form method="POST">
-            <h2>Login</h2>
-            <label>Username</label>
-            <input type="text" name="Username" require><br><br>
-            <label>Password</label>
-            <input type="password" name="Password" require><br><br>
-            <input type="submit" name="SUBMIT" value="Login" class="btn btn-dark"><br>
-            <p>Not a member? <a href="register.php">Sign Up</a> here.</p>
-        </form>
-    </div>
-    <?php
+</body>
+<?php
         
         session_start();
     class MyDB extends SQLite3 {
@@ -60,5 +49,4 @@
      $db->close();
 
     ?>
-</body>
 </html>
