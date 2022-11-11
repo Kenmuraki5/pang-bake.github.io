@@ -199,8 +199,10 @@ a {
 
 
 
-.login{
-  margin-right: 10px;
+#login{
+  text-decoration:none; 
+  color:black; 
+  padding-right: 20px;
 }
 .fa-shopping-cart{
   transition:all .2s;
