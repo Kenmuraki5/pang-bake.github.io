@@ -104,3 +104,8 @@ let calculation = () => {
 };
 
 calculation();
+
+// let login = document.getElementById("login");
+// if (basket.length > 0){
+//   login.innerHTML = "<div class='fa fa-user-circle' style='padding-right:10px; padding-top:7px; font-size:20px;'></div>"
+// }
