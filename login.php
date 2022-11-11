@@ -25,7 +25,6 @@
         }
         echo '<script type="text/javascript">';
         echo 'alert("wrong Username or Password.")';
-        echo    'window.location="login.php"';
         echo '</script>';
     }
     $db->close();
