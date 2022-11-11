@@ -76,22 +76,22 @@
   
   .shop {
     display: grid;
-    grid-template-columns: repeat(7, 223px);
+    grid-template-columns: repeat(5, 223px);
     gap: 30px;
-    justify-content: left;
+    justify-content: center;
     margin-top: 50px;
     overflow: scroll;
   }
   
   @media (max-width: 1000px) {
     .shop {
-      grid-template-columns: repeat(7, 223px);
+      grid-template-columns: repeat(5, 223px);
       justify-content: left;
     }
   }
   @media (max-width: 500px) {
     .shop {
-      grid-template-columns: repeat(7, 223px);
+      grid-template-columns: repeat(5, 223px);
       justify-content: left;
     }
   }

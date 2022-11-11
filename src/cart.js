@@ -116,7 +116,7 @@ let TotalAmount = () => {
       .map((x) => {
         let { item, id } = x;
         let search = Bestseller.find((y) => y.id === id) || neww.find((x) => x.id === id) || ButterCake.find((x) => x.id === id) || 
-        icecreamecake.find((x) => x.id === id) || ButterCake2.find((x) => x.id === id) || icecreamecake2.find((x) => x.id === id) || [];
+        icecreamecake.find((x) => x.id === id) || [];
 
         return item * search.price;
       })
