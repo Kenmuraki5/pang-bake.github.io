@@ -94,6 +94,13 @@
       justify-content: center;
     }
   }
+  @media (max-width: 800px) {
+    .shop {
+      grid-template-columns: repeat(2, 250px);
+      gap: 20px;
+      justify-content: center;
+    }
+  }
   @media (max-width: 500px) {
     .shop {
       grid-template-columns: repeat(2, 170px);
