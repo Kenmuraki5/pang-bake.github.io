@@ -140,24 +140,24 @@ let icecreamecake = [
 let cookies = [
   {
     id: "cookies1",
-    name: "cookie",
+    name: "Cookies Almond",
     price: 50,
     desc: "หอมหวาน",
-    img: "images/cookie1.jpg",
+    img: "images/cookie1.png",
   },
   {
     id: "cookies2",
-    name: "Egg Cake",
+    name: "Cookies Chocolate",
     price: 80,
     desc: "ขนมไข่",
-    img: "images/cookie2.jpg",
+    img: "images/cookie2.png",
   },
   {
     id: "cookies3",
-    name: "Dog pang",
+    name: "Cookies maison",
     price: 75,
     desc: "ขมปังหน้าหมา",
-    img: "https://upload.wikimedia.org/wikipedia/commons/f/f1/2ChocolateChipCookies.jpg",
+    img: "https://assets.afcdn.com/recipe/20190529/93153_w1024h1024c1cx2220cy1728.jpg",
   },
   {
     id: "cookies4",
