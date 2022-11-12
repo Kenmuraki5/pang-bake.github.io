@@ -136,3 +136,48 @@ let icecreamecake = [
     img: "https://www.indulgewithmimi.com/wp-content/uploads/2018/10/matcha-green-tea-mille-pancake-crepe-cake-japanese-1-735x735.jpg",
   }
 ];
+
+let cookies = [
+  {
+    id: "cookies1",
+    name: "cookie",
+    price: 50,
+    desc: "หอมหวาน",
+    img: "https://upload.wikimedia.org/wikipedia/commons/f/f1/2ChocolateChipCookies.jpg",
+  },
+  {
+    id: "cookies2",
+    name: "Egg Cake",
+    price: 80,
+    desc: "ขนมไข่",
+    img: "https://upload.wikimedia.org/wikipedia/commons/f/f1/2ChocolateChipCookies.jpg",
+  },
+  {
+    id: "cookies3",
+    name: "Dog pang",
+    price: 75,
+    desc: "ขมปังหน้าหมา",
+    img: "https://upload.wikimedia.org/wikipedia/commons/f/f1/2ChocolateChipCookies.jpg",
+  },
+  {
+    id: "cookies4",
+    name: "Strawberry Cake",
+    price: 400,
+    desc: "อร่อยลืมเมีย",
+    img: "https://i8b2m3d9.stackpathcdn.com/wp-content/uploads/2020/08/Strawberry_Shortcake_5140sq.jpg",
+  },
+  {
+    id: "cookies5",
+    name: "Matcha Crepe Cake",
+    price: 50,
+    desc: "หอมหวาน",
+    img: "https://www.indulgewithmimi.com/wp-content/uploads/2018/10/matcha-green-tea-mille-pancake-crepe-cake-japanese-1-735x735.jpg",
+  },
+  {
+    id: "cookies6",
+    name: "Matcha Crepe Cake",
+    price: 50,
+    desc: "หอมหวาน",
+    img: "https://www.indulgewithmimi.com/wp-content/uploads/2018/10/matcha-green-tea-mille-pancake-crepe-cake-japanese-1-735x735.jpg",
+  }
+];
