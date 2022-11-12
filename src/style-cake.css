@@ -35,6 +35,12 @@
     display: none;
     padding-top: 20px;
   }
+  .fa-user-circle{
+    translate: all .3s;
+  }
+  .fa-user-circle:hover{
+    transform:scale(1);
+  }
   .navbar2 {
     display: flex;
     flex-direction: row;
@@ -83,7 +89,7 @@
     overflow: scroll;
   }
   
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     .shop {
       grid-template-columns: repeat(5, 223px);
       justify-content: left;
