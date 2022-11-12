@@ -143,14 +143,14 @@ let cookies = [
     name: "cookie",
     price: 50,
     desc: "หอมหวาน",
-    img: "https://upload.wikimedia.org/wikipedia/commons/f/f1/2ChocolateChipCookies.jpg",
+    img: "images/cookie1.jpg",
   },
   {
     id: "cookies2",
     name: "Egg Cake",
     price: 80,
     desc: "ขนมไข่",
-    img: "https://upload.wikimedia.org/wikipedia/commons/f/f1/2ChocolateChipCookies.jpg",
+    img: "images/cookie2.jpg",
   },
   {
     id: "cookies3",
