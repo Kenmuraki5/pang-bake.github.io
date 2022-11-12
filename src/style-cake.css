@@ -89,7 +89,7 @@
     overflow: scroll;
   }
   
-  @media (max-width: 1200px) {
+  @media (max-width: 1400px) {
     .shop {
       grid-template-columns: repeat(5, 223px);
       justify-content: left;
