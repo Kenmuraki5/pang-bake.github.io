@@ -18,7 +18,7 @@ let Bestseller = [
     name: "Crepe Cakes",
     price: 25,
     desc: "อย่าทิ้งเกิน 2 วันไม่งั้นมดขึ้น",
-    img: "https://annabanana.co/wp-content/uploads/2020/01/Chocolate-Crepe-Cake-Feat-1.jpg",
+    img: "https://img.buzzfeed.com/video-api-prod/assets/bf889412d88f4cfc88748b46b5b72943/fb8.jpg?resize=1200:*",
   },
   {
     id: "Best4",
@@ -78,7 +78,7 @@ let ButterCake = [
     name: "Crepe Cakes",
     price: 25,
     desc: "อย่าทิ้งเกิน 2 วันไม่งั้นมดขึ้น",
-    img: "https://annabanana.co/wp-content/uploads/2020/01/Chocolate-Crepe-Cake-Feat-1.jpg",
+    img: "https://img.buzzfeed.com/video-api-prod/assets/bf889412d88f4cfc88748b46b5b72943/fb8.jpg?resize=1200:*",
   },
   {
     id: "Butter4",

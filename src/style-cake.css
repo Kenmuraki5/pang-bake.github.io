@@ -115,13 +115,13 @@
     gap: 30px;
     justify-content: center;
     margin-top: 50px;
-    overflow: scroll;
   }
   
   @media (max-width: 1400px) {
     .shop {
       grid-template-columns: repeat(5, 223px);
       justify-content: left;
+      overflow: scroll;
     }
     ::-webkit-scrollbar {
       width: 3px;

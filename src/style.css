@@ -111,7 +111,7 @@ a {
 
 .shop {
   display: grid;
-  grid-template-columns: repeat(4, 223px);
+  grid-template-columns: repeat(4, 300px);
   gap: 30px;
   justify-content: center;
   margin-top: 50px;
