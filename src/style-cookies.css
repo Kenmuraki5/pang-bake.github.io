@@ -24,6 +24,35 @@
   /**
   * ! Navbar STyles are here
   **/
+  .navbakery:hover{
+    background-color: #eed5a2;
+  }
+  .navcake:hover{
+    background-color: #e9c37b;
+  }
+  .navcookie:hover{
+    background-color: #e6af49;
+  }
+  .navdrink:hover{
+    background-color: #bc8a2c;
+  }
+  .navsnack:hover{
+    background-color: #9b7540;
+  }
+  #login{
+    text-decoration:none; 
+    color:black; 
+    padding-right: 20px;
+  }
+  .fa-shopping-cart{
+    transition:all .2s;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
+  .fa-shopping-cart:hover{
+    transform: scale(1.2);
+  }
   #log-out{
     background-color:burlywood;
     width: 190px; height: 100px;
@@ -222,21 +251,6 @@
   
   
   
-  
-  #login{
-    text-decoration:none; 
-    color:black; 
-    padding-right: 20px;
-  }
-  .fa-shopping-cart{
-    transition:all .2s;
-    position: absolute;
-    top: 20px;
-    right: 10px;
-  }
-  .fa-shopping-cart:hover{
-    transform: scale(1.2);
-  }
   .site-footer
   {
     background-color:#26272b;
