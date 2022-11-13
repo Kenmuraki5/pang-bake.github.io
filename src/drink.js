@@ -1,11 +1,11 @@
-let cake1 = document.getElementById("Milk");
-let cake2 = document.getElementById("Juice");
-let cake3 = document.getElementById("Tea");
-let cake4 = document.getElementById("Coffee");
+let drink1 = document.getElementById("Milk");
+let drink2 = document.getElementById("Juice");
+let drink3 = document.getElementById("Tea");
+let drink4 = document.getElementById("Coffee");
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generatemilk = () => {
-  return (cake1.innerHTML = Milk
+  return (drink1.innerHTML = Milk
     .map((x) => {
       let { id, name, price, desc, img } = x;
       let search = basket.find((x) => x.id === id) || [];
@@ -30,37 +30,11 @@ let generatemilk = () => {
     })
     .join(""));
 };
-let generatemilk2 = () => {
-    return (document.getElementById("Milk2").innerHTML = Milk2
-      .map((x) => {
-        let { id, name, price, desc, img } = x;
-        let search = basket.find((x) => x.id === id) || [];
-        return `
-        <div id=product-id-${id} class="item">
-          <img width="100%" src=${img} alt="">
-          <div class="details">
-            <h3>${name}</h3>
-            <p>${desc}</p>
-            <div class="price-quantity">
-              <h2>$ ${price} </h2>
-              <div class="buttons">
-                <div id=${id} class="quantity" style="display:none;">
-                ${search.item === undefined ? 0 : search.item}
-                </div>
-                <i class="btn btn-primary" onclick="increment(${id})" class="bi bi-plus-lg">add to cart</i>
-              </div>
-            </div>
-          </div>
-        </div>
-      `;
-      })
-      .join(""));
-  };
 
 
 
 let generatejuice = () => {
-  return (cake2.innerHTML = Juice
+  return (drink2.innerHTML = Juice
     .map((x) => {
       let { id, name, price, desc, img } = x;
       let search = basket.find((x) => x.id === id) || [];
@@ -85,35 +59,9 @@ let generatejuice = () => {
     })
     .join(""));
 };
-let generatejuice2 = () => {
-    return (document.getElementById("Juice2").innerHTML = Juice2
-      .map((x) => {
-        let { id, name, price, desc, img } = x;
-        let search = basket.find((x) => x.id === id) || [];
-        return `
-        <div id=product-id-${id} class="item">
-          <img width="100%" src=${img} alt="">
-          <div class="details">
-            <h3>${name}</h3>
-            <p>${desc}</p>
-            <div class="price-quantity">
-              <h2>$ ${price} </h2>
-              <div class="buttons">
-                <div id=${id} class="quantity" style="display:none;">
-                ${search.item === undefined ? 0 : search.item}
-                </div>
-                <i class="btn btn-primary" onclick="increment(${id})" class="bi bi-plus-lg">add to cart</i>
-              </div>
-            </div>
-          </div>
-        </div>
-      `;
-      })
-      .join(""));
-  };
 
   let generatetea = () => {
-    return (cake3.innerHTML = Tea
+    return (drink3.innerHTML = Tea
       .map((x) => {
         let { id, name, price, desc, img } = x;
         let search = basket.find((x) => x.id === id) || [];
@@ -138,35 +86,9 @@ let generatejuice2 = () => {
       })
       .join(""));
   };
-  let generatetea2 = () => {
-      return (document.getElementById("Tea2").innerHTML = Tea2
-        .map((x) => {
-          let { id, name, price, desc, img } = x;
-          let search = basket.find((x) => x.id === id) || [];
-          return `
-          <div id=product-id-${id} class="item">
-            <img width="100%" src=${img} alt="">
-            <div class="details">
-              <h3>${name}</h3>
-              <p>${desc}</p>
-              <div class="price-quantity">
-                <h2>$ ${price} </h2>
-                <div class="buttons">
-                  <div id=${id} class="quantity" style="display:none;">
-                  ${search.item === undefined ? 0 : search.item}
-                  </div>
-                  <i class="btn btn-primary" onclick="increment(${id})" class="bi bi-plus-lg">add to cart</i>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-        })
-        .join(""));
-    };
 
     let generatecoffee = () => {
-      return (cake4.innerHTML = Coffee
+      return (drink4.innerHTML = Coffee
         .map((x) => {
           let { id, name, price, desc, img } = x;
           let search = basket.find((x) => x.id === id) || [];
@@ -191,41 +113,11 @@ let generatejuice2 = () => {
         })
         .join(""));
     };
-    let generatecoffee2 = () => {
-        return (document.getElementById("Coffee2").innerHTML = Coffee2
-          .map((x) => {
-            let { id, name, price, desc, img } = x;
-            let search = basket.find((x) => x.id === id) || [];
-            return `
-            <div id=product-id-${id} class="item">
-              <img width="100%" src=${img} alt="">
-              <div class="details">
-                <h3>${name}</h3>
-                <p>${desc}</p>
-                <div class="price-quantity">
-                  <h2>$ ${price} </h2>
-                  <div class="buttons">
-                    <div id=${id} class="quantity" style="display:none;">
-                    ${search.item === undefined ? 0 : search.item}
-                    </div>
-                    <i class="btn btn-primary" onclick="increment(${id})" class="bi bi-plus-lg">add to cart</i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          `;
-          })
-          .join(""));
-      };
 
 generatemilk();
-generatemilk2();
 generatejuice();
-generatejuice2();
 generatetea();
-generatetea2();
 generatecoffee();
-generatecoffee2();
 
 let increment = (id) => {
   let selectedItem = id;

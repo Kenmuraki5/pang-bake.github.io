@@ -63,7 +63,13 @@
     z-index: 1000;
     display: none;
     padding-top: 20px;
-  } 
+  }
+  .fa-user-circle:hover{
+    transition: all .3s;
+  }
+  .fa-user-circle:hover{
+    transform: scale(1.2);
+  }
   .navbar2 {
     display: flex;
     flex-direction: row;
@@ -103,59 +109,35 @@
   * ! Shop items styles are here
   **/
   
-  #Milk{
+  .shop {
     display: grid;
-    grid-template-columns: repeat(6, 223px);
-    gap: 30px;
-    justify-content: left;
-    overflow: scroll;
-  }
-  #Juice{
-    display: grid;
-    grid-template-columns: repeat(8, 223px);
-    gap: 30px;
-    justify-content: left;
-    overflow: scroll;
-  }
-  #Tea{
-    display: grid;
-    grid-template-columns: repeat(5, 223px);
-    gap: 30px;
+    grid-template-columns: repeat(4, 280px);
+    gap: 50px;
     justify-content: center;
+    margin-top: 50px;
   }
-  #Coffee{
-    display: grid;
-    grid-template-columns: repeat(8, 223px);
-    gap: 30px;
-    justify-content: left;
-    overflow: scroll;
-  }
-  ::-webkit-scrollbar {
-    width: 3px;
-  }
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-  }
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
-  }
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-  @media (max-width: 1400px) {
-    #Tea{
-      display: grid;
-      grid-template-columns: repeat(5, 223px);
-      gap: 30px;
-      justify-content: left;
-      overflow: scroll;
+  @media (max-width: 1250px) {
+    .shop {
+      grid-template-columns: repeat(2, 250px);
+      gap: 20px;
+      justify-content: center;
     }
   }
+  @media (max-width: 800px) {
+    .shop {
+      grid-template-columns: repeat(2, 250px);
+      gap: 20px;
+      justify-content: center;
+    }
+  }
+  @media (max-width: 500px) {
+    .shop {
+      grid-template-columns: repeat(2, 170px);
+      gap: 20px;
+      justify-content: center;
+    }
+  }
+  
   .item {
     border: 2px solid #212529;
     border-radius: 4px;

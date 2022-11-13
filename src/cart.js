@@ -16,7 +16,8 @@ let generateCartItems = () => {
       .map((x) => {
         let { id, item } = x;
         let search = Bestseller.find((y) => y.id === id) || neww.find((x) => x.id === id) || ButterCake.find((x) => x.id === id)||
-        icecreamecake.find((x) => x.id === id) || cookies.find((x) => x.id === id) || [];
+        icecreamecake.find((x) => x.id === id) || cookies.find((x) => x.id === id) || Milk.find((x) => x.id === id) || 
+        Juice.find((x) => x.id === id) || Tea.find((x) => x.id === id) || Coffee.find((x) => x.id === id) ||[];
         return `
       <div class="cart-item">
         <img width="100" src=${search.img} alt="" />
@@ -116,7 +117,8 @@ let TotalAmount = () => {
       .map((x) => {
         let { item, id } = x;
         let search = Bestseller.find((y) => y.id === id) || neww.find((x) => x.id === id) || ButterCake.find((x) => x.id === id) || 
-        icecreamecake.find((x) => x.id === id) || cookies.find((x) => x.id === id) ||[];
+        icecreamecake.find((x) => x.id === id) || cookies.find((x) => x.id === id) || Milk.find((x) => x.id === id) || 
+        Juice.find((x) => x.id === id) || Tea.find((x) => x.id === id) || Coffee.find((x) => x.id === id) ||[];
 
         return item * search.price;
       })
