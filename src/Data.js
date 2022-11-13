@@ -94,13 +94,6 @@ let ButterCake = [
     desc: "หอมอร่อยมั้ง",
     img: "https://www.noracooks.com/wp-content/uploads/2022/03/sq-3.jpg",
   },
-  {
-    id: "Butter5",
-    name: "Cup Cake",
-    price: 45,
-    desc: "หอมอร่อยมั้ง",
-    img: "https://www.noracooks.com/wp-content/uploads/2022/03/sq-3.jpg",
-  }
 ];
 
 // page2
