@@ -58,11 +58,11 @@
     width: 190px; height: 100px;
     display: flex;
     justify-content: center;
-    position:sticky;
+    position:fixed;
     top:56px;
     right:10px; 
     z-index: 1000;
-    display: none;
+    display: flex;
     padding-top: 20px;
   }
   .fa-user-circle{
