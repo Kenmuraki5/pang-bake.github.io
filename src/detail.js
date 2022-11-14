@@ -51,8 +51,8 @@ let generatedetail = () => {
               <h5 style="color:red;">คำสั่งพิเศษ</h5>
               <h4>${dat.price} ฿</h4>
             </div>
-            <form method="POST" action="detail.php">
-                <textarea type="text" name="specialde"rows="5" cols="10" style="width:100%;" value="dfdfdf"></textarea>
+            <form">
+                <textarea type="text" name="specialde"rows="7" style="width:100%;" value="dfdfdf"></textarea>
               <div class="buttons mt-5">
                   <div>
                     <div id=${dat.id} class="quantity" style="align-items:center; display:none;"></div>
