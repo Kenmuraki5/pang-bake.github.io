@@ -108,6 +108,12 @@
             </div>
         </div>
     </footer>
+    <?php
+    $id = htmlentities($_POST['specialde']) ;
+    echo '<script type="text/javascript">';
+        echo    "localStorage.setItem('specdetail', '".$id."')";
+    echo '</script>';
+?>
 </body>
 <script src="src/Data.js"></script>
 <script src="src/detail.js"></script>
