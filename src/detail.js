@@ -35,27 +35,32 @@ calculation();
 let generateCartItems = () => {
         let { id, item } = x => x.id == dat.id;
   ShoppingCart.innerHTML = `
-        <div class="row m-5">
-            <div class="col-sm-6">
-                <div class="preview">
-                    <img src="${dat.src}">
-                </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="${dat.src}" width="100%">
+        </div>
+        <div class="col-md-6 mt-3">
+            <div class="name"><h1>${dat.name}</h1></div>
+            <div class="detail col-md-12 mt-4">
+                <p>${dat.desc}</p>
             </div>
-            <div class="info col-md-6">
-                <div class="col-md-12">
-                    <h1>${dat.name}</h1>
+            <div class="d-flex justify-content-between">
+              <h5 style="color:red;">คำสั่งพิเศษ</h5>
+              <h4>${dat.price} ฿</h4>
+            </div>
+            <div class="special">
+              <textarea rows="5" cols="10" style="width:100%;"name="Address" required></textarea>
+            </div>
+            <div class="buttons mt-5">
+                <div>
+                  <div id=${dat.id} class="quantity" style="align-items:center; display:none;"></div>
                 </div>
-                <div class="detail col-md-12">
-                    <p>${dat.desc}</p>
-                </div>
-                <div class="buttons">
-                  <div style="display: flex; align-items:center;">
-                    <div id=${dat.id} class="quantity" style="align-items:center; display:none;"></div>
-                  </div>
-                  <i onclick="increment(${dat.id})" class="btn btn-primary">add to cart</i>
-                </div>
+                <i onclick="increment(${dat.id})" class="btn btn-lg btn-primary">add to cart</i>
             </div>
         </div>
+    </div>
+  </div>
       `;
 }
 

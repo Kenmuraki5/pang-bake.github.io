@@ -28,9 +28,10 @@ if (localStorage.getItem("Username") != null){
 let savedata = (obj) => {
   const person = {
     id: obj.getAttribute("id"),
-    name: obj.getAttribute("name"),
+    name: obj.getAttribute("alt"),
     src: obj.getAttribute("src"),
-    desc:obj.getAttribute("value"),
+    desc: obj.getAttribute("value"),
+    price: obj.getAttribute("name"),
   }
   window.localStorage.setItem('user',   JSON.stringify(person));
 };
@@ -42,7 +43,7 @@ let generatesnack = () => {
       let search = basket.find((x) => x.id === id) || [];
       return `
       <div id=product-id-${id} class="item">
-        <a href="detail.html"><img width="100%" src=${img} id="${id}" name="${name}" value="${desc}"onclick="savedata(this)"></a>
+        <a href="detail.html"><img width="100%" alt="${name} "src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)"></a>
         <div class="details">
           <h3>${name}</h3>
           <div class="price-quantity">
