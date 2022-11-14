@@ -116,7 +116,6 @@
     </div>
     
     <?php
-    session_start();
 
     class MyDB extends SQLite3 {
         function __construct() {
