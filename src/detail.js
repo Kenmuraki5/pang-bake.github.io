@@ -2,7 +2,6 @@ let ShoppingCart = document.getElementById("shopping-cart");
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 let dat = JSON.parse(window.localStorage.getItem('user')) || [];
 let num = 0;
-
 function show(){
   if (num == 0){
     document.getElementById("log-out").style.display = "flex";
@@ -24,6 +23,9 @@ if (localStorage.getItem("Username") != null){
   login.innerHTML = `<div class='fa fa-user-circle' style='padding-right:10px; padding-top:7px; font-size:20px; cursor: pointer;' onclick="show()"></div>`;
   document.getElementById("log-out").innerHTML = "<div style='text-align:center;'>username : "+localStorage.getItem("Username")+
   "</div><footer style='text-align:center; background-color:white; cursor: pointer; position:absolute; bottom:0; width:100%;' onclick='logout()'>logout</footer>";
+}
+if (localStorage.getItem('user')== null){
+  window.location.replace('index.html');
 }
 
 let calculation = () => {
