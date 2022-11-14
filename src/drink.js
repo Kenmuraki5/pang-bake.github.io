@@ -27,9 +27,7 @@ if (localStorage.getItem("Username") != null){
   document.getElementById("log-out").innerHTML = "<div style='text-align:center;'>username : "+localStorage.getItem("Username")+
   "</div><footer style='text-align:center; background-color:white; cursor: pointer; position:absolute; bottom:0; width:100%;' onclick='logout()'>logout</footer>";
 }
-if (localStorage.getItem('user')== null){
-  window.location.replace('index.html');
-}
+
 let savedata = (obj) => {
   const person = {
     id: obj.getAttribute("id"),

@@ -34,7 +34,7 @@ let calculation = () => {
 };
 
 calculation();
-let generateCartItems = () => {
+let generatedetail = () => {
         let { id, item } = x => x.id == dat.id;
   ShoppingCart.innerHTML = `
   <div class="container">
@@ -51,22 +51,24 @@ let generateCartItems = () => {
               <h5 style="color:red;">คำสั่งพิเศษ</h5>
               <h4>${dat.price} ฿</h4>
             </div>
-            <div class="special">
-              <textarea rows="5" cols="10" style="width:100%;"name="Address" required></textarea>
-            </div>
-            <div class="buttons mt-5">
-                <div>
-                  <div id=${dat.id} class="quantity" style="align-items:center; display:none;"></div>
-                </div>
-                <i onclick="increment(${dat.id})" class="btn btn-lg btn-primary">add to cart</i>
-            </div>
+            <form>
+              <div class="special">
+                <textarea rows="5" cols="10" style="width:100%;"name="Address" required></textarea>
+              </div>
+              <div class="buttons mt-5">
+                  <div>
+                    <div id=${dat.id} class="quantity" style="align-items:center; display:none;"></div>
+                  </div>
+                  <i onclick="increment(${dat.id})" type="submit" class="btn btn-lg btn-primary">add to cart</i>
+              </div>
+            </form>
         </div>
     </div>
   </div>
       `;
 }
 
-generateCartItems();
+generatedetail();
 
 let increment = (id) => {
   let selectedItem = id;
@@ -81,7 +83,7 @@ let increment = (id) => {
     search.item += 1;
   }
 
-  generateCartItems();
+  generatedetail();
   update(selectedItem.id);
   localStorage.setItem("data", JSON.stringify(basket));
 };
@@ -96,7 +98,7 @@ let decrement = (id) => {
   }
   update(selectedItem.id);
   basket = basket.filter((x) => x.item !== 0);
-  generateCartItems();
+  generatedetail();
   localStorage.setItem("data", JSON.stringify(basket));
 };
 
@@ -111,14 +113,14 @@ let removeItem = (id) => {
   let selectedItem = id;
   // console.log(selectedItem.id);
   basket = basket.filter((x) => x.id !== selectedItem.id);
-  generateCartItems();
+  generatedetail();
   TotalAmount();
   localStorage.setItem("data", JSON.stringify(basket));
 };
 
 let clearCart = () => {
   basket = [];
-  generateCartItems();
+  generatedetail();
   localStorage.setItem("data", JSON.stringify(basket));
 };
 
