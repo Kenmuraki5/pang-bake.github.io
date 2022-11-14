@@ -18,6 +18,13 @@ function logout(){
   localStorage.clear();
   document.location.reload();
 }
+let login = document.getElementById("login");
+if (localStorage.getItem("Username") != null){
+  login.removeAttribute("href");
+  login.innerHTML = `<div class='fa fa-user-circle' style='padding-right:10px; padding-top:7px; font-size:20px; cursor: pointer;' onclick="show()"></div>`;
+  document.getElementById("log-out").innerHTML = "<div style='text-align:center;'>username : "+localStorage.getItem("Username")+
+  "</div><footer style='text-align:center; background-color:white; cursor: pointer; position:absolute; bottom:0; width:100%;' onclick='logout()'>logout</footer>";
+}
 
 let calculation = () => {
   let cartIcon = document.getElementById("cartAmount");
