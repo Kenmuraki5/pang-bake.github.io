@@ -3,6 +3,60 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/**
+* ! Navbar STyles are here
+**/
+.navbakery:hover {
+    background-color: #eed5a2;
+}
+
+.navcake:hover {
+    background-color: #e9c37b;
+}
+
+.navcookie:hover {
+    background-color: #e6af49;
+}
+
+.navdrink:hover {
+    background-color: #bc8a2c;
+}
+
+.navsnack:hover {
+    background-color: #9b7540;
+}
+
+#login {
+    text-decoration: none;
+    color: black;
+    padding-right: 30px;
+}
+
+.fa-shopping-cart {
+    transition: all .2s;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.fa-shopping-cart:hover {
+    transform: scale(1.2);
+}
+
+#log-out {
+    background-color: burlywood;
+    width: 190px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    z-index: 1000;
+    display: none;
+    padding-top: 20px;
+}
+
 .cartAmount {
     position: absolute;
     top: -2px;
@@ -13,22 +67,23 @@
     padding: 5px;
     border-radius: 3px;
 }
-.container
-{
-    margin-top: 56px;
+
+.container {
+    margin-top: 96px;
     /* display: grid; */
     grid-template-columns: 1fr 1fr;
     column-gap: 50px;
 }
-img
-{
+
+img {
     width: 100%;
     height: auto;
 }
-.info
-{
+
+.info {
     margin-top: 20px;
 }
+
 .btn-primary {
     width: 90%;
 
@@ -37,6 +92,7 @@ img
 .detail {
     padding-bottom: 10em;
 }
+
 .site-footer {
     background-color: #26272b;
     padding: 45px 0 20px;
@@ -201,31 +257,4 @@ img
         margin-right: 0;
         font-weight: 600
     }
-}
-
-#increment,
-#decrement {
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-}
-
-#increment {
-  color: white;
-  background-color: green;
-  border-radius: 50%;
-}
-
-#decrement {
-  color: white;
-  background-color: red;
-  border-radius: 50%;
-}
-button {
-    color: #fefefe;
-    border: 3px solid;
-    background: #fefefe;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
 }
