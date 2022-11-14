@@ -1,5 +1,32 @@
 let snacks = document.getElementById("snack");
 let basket = JSON.parse(localStorage.getItem("data")) || [];
+let num = 0;
+
+function show(){
+  if (num == 0){
+    document.getElementById("log-out").style.display = "flex";
+    num++;
+  }
+  else{
+    document.getElementById("log-out").style.display = "none";
+    num=0;
+  }
+  
+};
+function logout(){
+  localStorage.clear();
+  document.location.reload();
+}
+
+let savedata = (obj) => {
+  const person = {
+    id: obj.getAttribute("id"),
+    name: obj.getAttribute("name"),
+    src: obj.getAttribute("src"),
+    desc:obj.getAttribute("value"),
+  }
+  window.localStorage.setItem('user',   JSON.stringify(person));
+};
 
 let generatesnack = () => {
   return (snacks.innerHTML = snack
@@ -8,10 +35,9 @@ let generatesnack = () => {
       let search = basket.find((x) => x.id === id) || [];
       return `
       <div id=product-id-${id} class="item">
-        <img width="100%" src=${img} alt="">
+        <a href="detail.html"><img width="100%" src=${img} id="${id}" name="${name}" value="${desc}"onclick="savedata(this)"></a>
         <div class="details">
           <h3>${name}</h3>
-          <p>${desc}</p>
           <div class="price-quantity">
             <h2>$ ${price} </h2>
             <div class="buttons">
@@ -61,27 +87,3 @@ let calculation = () => {
 };
 
 calculation();
-
-let num = 0;
-function show(){
-  if (num == 0){
-    document.getElementById("log-out").style.display = "flex";
-    num++;
-  }
-  else{
-    document.getElementById("log-out").style.display = "none";
-    num=0;
-  }
-  
-};
-function logout(){
-  localStorage.clear();
-  document.location.reload();
-}
-let login = document.getElementById("login");
-if (localStorage.getItem("Username") != null){
-  login.removeAttribute("href");
-  login.innerHTML = `<div class='fa fa-user-circle' style='padding-right:10px; padding-top:7px; font-size:20px; cursor: pointer;' onclick="show()"></div>`;
-  document.getElementById("log-out").innerHTML = "<div style='text-align:center;'>username : "+localStorage.getItem("Username")+
-  "</div><footer style='text-align:center; background-color:white; cursor: pointer; position:absolute; bottom:0; width:100%;' onclick='logout()'>logout</footer>";
-}
