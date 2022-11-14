@@ -58,6 +58,7 @@
     width: 190px; height: 100px;
     display: none;
     justify-content: center;
+    position:fixed;
     top:56px;
     right:10px; 
     z-index: 1000;
