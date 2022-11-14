@@ -51,15 +51,13 @@ let generatedetail = () => {
               <h5 style="color:red;">คำสั่งพิเศษ</h5>
               <h4>${dat.price} ฿</h4>
             </div>
-            <form>
-              <div class="special">
-                <textarea rows="5" cols="10" style="width:100%;"name="Address" required></textarea>
-              </div>
+            <form method="POST" action="detail.php">
+                <textarea type="text" name="specialde"rows="5" cols="10" style="width:100%;" value="dfdfdf"></textarea>
               <div class="buttons mt-5">
                   <div>
                     <div id=${dat.id} class="quantity" style="align-items:center; display:none;"></div>
                   </div>
-                  <i onclick="increment(${dat.id})" type="submit" class="btn btn-lg btn-primary">add to cart</i>
+                  <input onclick="increment(${dat.id})" type="submit" value="add to cart" class="btn btn-lg btn-primary"/>
               </div>
             </form>
         </div>
@@ -87,20 +85,6 @@ let increment = (id) => {
   update(selectedItem.id);
   localStorage.setItem("data", JSON.stringify(basket));
 };
-let decrement = (id) => {
-  let selectedItem = id;
-  let search = basket.find((x) => x.id === selectedItem.id);
-
-  if (search === undefined) return;
-  else if (search.item === 0) return;
-  else {
-    search.item -= 1;
-  }
-  update(selectedItem.id);
-  basket = basket.filter((x) => x.item !== 0);
-  generatedetail();
-  localStorage.setItem("data", JSON.stringify(basket));
-};
 
 let update = (id) => {
   let search = basket.find((x) => x.id === id);
@@ -108,20 +92,6 @@ let update = (id) => {
   document.getElementById(id).innerHTML = search.item;
   calculation();
   TotalAmount();
-};
-let removeItem = (id) => {
-  let selectedItem = id;
-  // console.log(selectedItem.id);
-  basket = basket.filter((x) => x.id !== selectedItem.id);
-  generatedetail();
-  TotalAmount();
-  localStorage.setItem("data", JSON.stringify(basket));
-};
-
-let clearCart = () => {
-  basket = [];
-  generatedetail();
-  localStorage.setItem("data", JSON.stringify(basket));
 };
 
 let TotalAmount = () => {
