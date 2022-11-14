@@ -87,6 +87,12 @@
             padding: 0 5px;
             background: #fff;
         }
+        @media screen and (max-height:670px){
+            body{
+                margin-top: 120px;
+                margin-bottom: 60px;
+            }
+        }
     </style>
 
     <body>

@@ -19,7 +19,7 @@
     }
     html{
         display:flex;
-        height:100%;
+        height:100vh;
         width: 100%;
         justify-content:center;
         align-items:center;
@@ -30,12 +30,16 @@
         background-size: cover;
    
         background-image: url(https://raw.githubusercontent.com/Kenmuraki5/pang-bake.github.io/main/images/image2.jpeg);
+        background-repeat:no-repeat;
     }
     .container {
         background: #fff;
         border-radius: 5px;
         padding: 25px 40px;
-        
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
     }
     
    
@@ -76,6 +80,15 @@
         padding: 0 5px;
         background: #fff;
     }
+    @media screen and (max-height:595px){
+        html{
+            display: block;
+            background-color: black;
+        }
+        .container{
+            width: 45%;
+        }
+    }
 </style>
 <body>
     <div class="container" style="z-index:1000;">
@@ -114,53 +127,48 @@
             <p class="link mt-1" style="text-align: center;">Already a member? <a href="login.php">Sign In</a></p>
         </form>
     </div>
-    
     <?php
-
-    class MyDB extends SQLite3 {
-        function __construct() {
-           $this->open('user.db');
+        class MyDB extends SQLite3 {
+            function __construct() {
+            $this->open('user.db');
+            }
         }
-     }
-     $db = new MyDB();
-     
-    if(isset($_POST['SUBMIT']))
-    {
-    $Name = htmlentities($_POST['Name']) ;
-    $Surname = htmlentities($_POST['Surname']);
-    $Username = htmlentities($_POST['Username']);
-    $Password = htmlentities($_POST['Password']);
-    $Password_2 = htmlentities($_POST['Password_2']);
-    $Address = htmlentities($_POST['Address']);
-    $sql = "SELECT * from COMPANY WHERE USERNAME = '$Username'";
-    $ret = $db->query($sql);
-    $row = $ret->fetchArray(SQLITE3_ASSOC);
-    if($row > 0){
-        echo '<script type="text/javascript">';
-        echo 'alert("This Username already exited.")';  
-        echo '</script>';
-        $row == 0;
+        $db = new MyDB();
+        
+        if(isset($_POST['SUBMIT']))
+        {
+        $Name = htmlentities($_POST['Name']) ;
+        $Surname = htmlentities($_POST['Surname']);
+        $Username = htmlentities($_POST['Username']);
+        $Password = htmlentities($_POST['Password']);
+        $Password_2 = htmlentities($_POST['Password_2']);
+        $Address = htmlentities($_POST['Address']);
+        $sql = "SELECT * from COMPANY WHERE USERNAME = '$Username'";
+        $ret = $db->query($sql);
+        $row = $ret->fetchArray(SQLITE3_ASSOC);
+        if($row > 0){
+            echo '<script type="text/javascript">';
+            echo 'alert("This Username already exited.")';  
+            echo '</script>';
+            $row == 0;
+            }
+        elseif($Password != $Password_2){
+            echo '<script type="text/javascript">';
+            echo 'alert("Password dose not match!")';  
+            echo '</script>';
         }
-    elseif($Password != $Password_2){
-        echo '<script type="text/javascript">';
-        echo 'alert("Password dose not match!")';  
-        echo '</script>';
-    }
-        else{
-        $sql =<<<EOF
-                    INSERT INTO COMPANY(NAME,SURNAME,USERNAME,PASSWORD,ADDRESS)
-                    VALUES ('$Name', '$Surname','$Username', '$Password' ,'$Address');
-                EOF;
-                header('location: login.php');
-                $ret = $db->exec($sql);
+            else{
+            $sql =<<<EOF
+                        INSERT INTO COMPANY(NAME,SURNAME,USERNAME,PASSWORD,ADDRESS)
+                        VALUES ('$Name', '$Surname','$Username', '$Password' ,'$Address');
+                    EOF;
+                    header('location: login.php');
+                    $ret = $db->exec($sql);
+            }
         }
-    }
-    
-     // Close database
-     $db->close();
-     
-
+        
+        // Close database
+        $db->close();
     ?>
-    
 </body>
 </html>
