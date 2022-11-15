@@ -175,13 +175,11 @@
         window.location.replace('login.php');
     }
     var radios = document.getElementsByName('exampleRadios');
-    function show(){
-        if (radios[0].checked) {
-            document.getElementById("delivery-address").innerHTML = '<?php echo"$Address";?>'
-        }
-        if (radios[1].checked){
-            document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
-        }
+    if (radios[0].checked) {
+        document.getElementById("delivery-address").innerHTML = '<?php echo"$Address";?>'
+    }
+    if (radios[1].checked){
+        document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
     }
     </script>`
 ?>
