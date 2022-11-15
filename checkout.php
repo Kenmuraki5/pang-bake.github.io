@@ -169,7 +169,14 @@
        $Address = $row['ADDRESS'];
     }
     // Close database
-    echo 'alert('."$Address".')';  
+    echo 'alert('."$Address".')'; 
 ?>
-
+<script>
+    if (radios[0].checked) {
+        document.getElementById("delivery-address").innerHTML = '<p><?php echo "$Address"; ?></p>' 
+    }
+    if (radios[1].checked){
+        document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
+    }
+</script>
 </html>
