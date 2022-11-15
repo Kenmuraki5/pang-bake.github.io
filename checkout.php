@@ -172,6 +172,7 @@
     echo 'alert('."$Address".')'; 
 ?>
 <script>
+    var radios = document.getElementsByName('exampleRadios');
     if (radios[0].checked) {
         document.getElementById("delivery-address").innerHTML = '<p><?php echo "$Address"; ?></p>' 
     }
