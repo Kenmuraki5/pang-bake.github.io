@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Login T-pang-bake</title>
 </head>
-
+<?php
+    session_start();
+?>
 <body>
     <style>
         * {
@@ -87,12 +89,6 @@
             padding: 0 5px;
             background: #fff;
         }
-        @media screen and (max-height:670px){
-            body{
-                margin-top: 120px;
-                margin-bottom: 60px;
-            }
-        }
     </style>
 
     <body>
@@ -148,7 +144,12 @@
             </form>
         </div>
         
-    <?php
+    
+
+
+    </body>
+<?php
+
         class MyDB extends SQLite3 {
             function __construct() {
             $this->open('user.db');
@@ -159,11 +160,12 @@
 
         if(isset($_POST['SUBMIT']))
         {
+            
             $Username = htmlentities($_POST['Username']);
             $Password = htmlentities($_POST['Password']);
             $sql = "SELECT * from COMPANY WHERE USERNAME = '$Username' AND PASSWORD = '$Password'";
             $ret = $db->query($sql);
-            
+            $_SESSION["Username"] = $Username;
             while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
             echo '<script type="text/javascript">';
             echo    "localStorage.setItem('Username', '".$Username."')";
@@ -181,8 +183,4 @@
         $db->close();
 
     ?>
-
-
-    </body>
-
 </html>
