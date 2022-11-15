@@ -85,7 +85,9 @@
                         </label>
                     </div>
                     <h5>Address</h5>
-                    <div class="p-3 d-flex justify-content-center" id="delivery-address"></div>
+                    <form method="POST">
+                        <div class="p-3 d-flex justify-content-center" id="delivery-address"></div>
+                    </form>
                     <hr>
                     <h3 style="text-align:center;">Summary</h3>
                     <!-- ส่วนของ summart -->
