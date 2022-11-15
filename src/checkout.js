@@ -73,7 +73,7 @@ let generatesummary = () => {
         Juice.find((x) => x.id === id) || Tea.find((x) => x.id === id) || Coffee.find((x) => x.id === id) ||
         snack.find((x) => x.id === id) ||[];
         return `
-        <p class="d-flex justify-content-between">Cupcake<span>${search.price}฿</span></p>
+        <p class="d-flex justify-content-between">${search.name}<span>${search.price}฿</span></p>
         <p style="text-align: right; margin-top: -10px; color: rgb(156, 164, 169);">x${item}</p>
       `;
       })
