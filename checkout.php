@@ -75,15 +75,13 @@
                             Address as previously applied
                         </label>
                     </div>
-                    <form method="POST">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                value="option2">
-                            <label class="form-check-label" for="exampleRadios2">
-                                New address
-                            </label>
-                        </div>
-                    </form>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            New address
+                        </label>
+                    </div>
                     <h5>Address</h5>
                     <div class="p-3 d-flex justify-content-center" id="delivery-address"></div>
                     <hr>
