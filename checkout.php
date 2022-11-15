@@ -83,7 +83,7 @@
                         </label>
                     </div>
                     <h5>Address</h5>
-                    <div class="p-3" id="delivery-address"></div>
+                    <div class="p-3 d-flex justify-content-center" id="delivery-address"></div>
                     <hr>
                     <h3 style="text-align:center;">Summary</h3>
                     <!-- ส่วนของ summart -->
@@ -176,7 +176,7 @@
     var radios = document.getElementsByName('exampleRadios');
     function show(){
         if (radios[0].checked) {
-            document.getElementById("delivery-address").innerHTML = '<p>216 ขุมทอง-ลำต้อยติ่ง ต.ขุมทอง อ.ลาดกระบัง จ.กรุงเทพ 10520</p>'
+            document.getElementById("delivery-address").innerHTML = '<?php echo"$Address";?>'
         }
         if (radios[1].checked){
             document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
