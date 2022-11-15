@@ -70,7 +70,7 @@
                     <h3 style="text-align:center;">Delivery</h3>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                            value="option1" onclick="show()" checked>
+                            value="option1" checked>
                         <label class="form-check-label" for="exampleRadios1">
                             Address as previously applied
                         </label>
