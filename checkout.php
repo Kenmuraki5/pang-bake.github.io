@@ -70,22 +70,20 @@
             <div class="col-md-4 p-3">
                 <div class="customers p-3b border rounded-3 p-3" style="background-color: rgb(251, 251, 251);">
                     <h3 style="text-align:center;">Delivery</h3>
-                    <form method="POST">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                                value="option1" <?php echo 'onclick="showaddress()"';?> checked>
-                            <label class="form-check-label" for="exampleRadios1">
-                                Address as previously applied
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                value="option2" <?php echo 'onclick="showaddress()"';?>>
-                            <label class="form-check-label" for="exampleRadios2">
-                                New address
-                            </label>
-                        </div>
-                    </form>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                            value="option1" <?php echo 'onclick="showaddress()"';?> checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Address as previously applied
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2" <?php echo 'onclick="showaddress()"';?>>
+                        <label class="form-check-label" for="exampleRadios2">
+                            New address
+                        </label>
+                    </div>
                     <h5>Address</h5>
                     <div class="p-3 d-flex justify-content-center" id="delivery-address"></div>
                     <hr>
