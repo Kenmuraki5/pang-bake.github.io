@@ -167,7 +167,7 @@
        $Address = $row['ADDRESS'];
     }
     // Close database
-    echo "alert($Address)";
+    echo 'alert('."$Address".')';  
 ?>
 
 </html>
