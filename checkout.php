@@ -67,7 +67,7 @@
             </div>
             <div class="col-md-4 p-3">
                 <div class="customers p-3b border rounded-3 p-3" style="background-color: rgb(251, 251, 251);">
-                    <h3 style="text-align:center;">delivery</h3>
+                    <h3 style="text-align:center;">Delivery</h3>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
                             value="option1" onclick="show()" checked>
@@ -79,13 +79,13 @@
                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
                             value="option2" onclick="show()">
                         <label class="form-check-label" for="exampleRadios2">
-                            new address
+                            New address
                         </label>
                     </div>
                     <h5>Address</h5>
                     <div class="p-3" id="delivery-address"></div>
                     <hr>
-                    <h3 style="text-align:center;">summary</h3>
+                    <h3 style="text-align:center;">Summary</h3>
                     <!-- ส่วนของ summart -->
                     <div class="p-3 justify-content-between" id="summary"></div>
                     <hr>
@@ -150,10 +150,32 @@
 </body>
 <script src="src/Data.js"></script>
 <script src="src/checkout.js"></script>
+<?php
+    class MyDB extends SQLite3 {
+        function __construct() {
+        $this->open('user.db');
+        }
+    }
+
+    // Open Database 
+    $db = new MyDB();
+    $Username = $_SESSION["Username"];
+    $sql ="SELECT * from COMPANY WHERE USERNAME = '$Username'";
+
+    $ret = $db->query($sql);
+    while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+       $address = $row['ADDRESS'];
+    }
+    // Close database
+    $db->close();
+?>
 <script>
+    if (localStorage.getItem('Username')== null){
+        window.location.replace('login.php');
+    }
     var radios = document.getElementsByName('exampleRadios');
     if (radios[0].checked) {
-        document.getElementById("delivery-address").innerHTML = '<p>216 ขุมทอง-ลำต้อยติ่ง ต.ขุมทอง อ.ลาดกระบัง จ.กรุงเทพ 10520</p>' 
+        document.getElementById("delivery-address").innerHTML = <?php echo"<p>".$address."<p>"; ?> 
     }
     if (radios[1].checked){
         document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'

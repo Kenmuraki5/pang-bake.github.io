@@ -104,7 +104,7 @@ let TotalAmount = () => {
       })
       .reduce((x, y) => x + y, 0);
     t_amount.innerHTML = `
-    <h4 class="p-3 d-flex justify-content-between">total:<span style="color: red;">${amount}฿</span></h4>
+    <h4 class="p-3 d-flex justify-content-between">Total:<span style="color: red;">${amount}฿</span></h4>
     `;
   } else return;
 };
