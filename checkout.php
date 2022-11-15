@@ -87,18 +87,18 @@
                     <h5>Address</h5>
                     <form method="POST">
                         <div class="p-3 d-flex justify-content-center" id="delivery-address"></div>
+                        <hr>
+                        <h3 style="text-align:center;">Summary</h3>
+                        <!-- ส่วนของ summart -->
+                        <div class="p-3 justify-content-between" id="summary"></div>
+                        <hr>
+                        <!-- ส่วนของ ราคารวม -->
+                        <div id="totalprice"></div>
+                        <hr>
+                        <h6 style="text-align: center; color: rgb(229, 48, 78);">Now the system only has cash on delivery.</h6>
+                        <hr>
+                        <input type="submit" name="SUBMIT" value="Payment" class="btn btn-warning" style="width:100%;"><br>
                     </form>
-                    <hr>
-                    <h3 style="text-align:center;">Summary</h3>
-                    <!-- ส่วนของ summart -->
-                    <div class="p-3 justify-content-between" id="summary"></div>
-                    <hr>
-                    <!-- ส่วนของ ราคารวม -->
-                    <div id="totalprice"></div>
-                    <hr>
-                    <h6 style="text-align: center; color: rgb(229, 48, 78);">Now the system only has cash on delivery.</h6>
-                    <hr>
-                    <input type="submit" name="SUBMIT" value="Payment" class="btn btn-warning" style="width:100%;"><br>
                 </div>
             </div>
         </div>
