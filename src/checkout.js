@@ -7,7 +7,9 @@ let calculation = () => {
   let cartIcon = document.getElementById("cartAmount");
   cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
 };
-
+if (localStorage.getItem('Username')== null){
+  window.location.replace('login.php');
+}
 calculation();
 let generateproductall = () => {
   if (basket.length !== 0) {

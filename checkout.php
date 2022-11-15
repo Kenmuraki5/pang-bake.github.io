@@ -168,18 +168,13 @@
     }
     // Close database
     $db->close();
-    echo`<script>
-    if (localStorage.getItem('Username')== null){
-        window.location.replace('login.php');
-    }
-    var radios = document.getElementsByName('exampleRadios');
-    if (radios[0].checked) {
-        document.getElementById("delivery-address").innerHTML = '<?php echo"$Address";?>'
-    }
-    if (radios[1].checked){
-        document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
-    }
-    </script>`
+    echo "<script>";
+    echo "var radios = document.getElementsByName('exampleRadios');";
+    echo "if (radios[0].checked) {";
+    echo ".   document.getElementById('delivery-address').innerHTML = '<?php echo'".$Address."';?>}'";
+    echo "if (radios[1].checked){";
+    echo "    document.getElementById('delivery-address').innerHTML = '<textarea rows='5' cols='30' name='Address' required ></textarea>}";
+    echo"</script>";
 ?>
 
 </html>
