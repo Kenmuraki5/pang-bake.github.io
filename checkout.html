@@ -17,55 +17,163 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark " style="position: fixed; z-index: 1000; top:0; width: 100%; background-color: black;">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div>
-                <a class="navbar-brand" href="index.html">T-pang-bake</a>
-            </div>
-            <div class="collapse navbar-collapse mr-5" id="navbarTogglerDemo03">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link navbakery" aria-current="page" href="#">Bakery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link navcake" href="secake.html">Cake</a>
-                    </li>
-                    <li class="nav-item" style="background-color: #e6af49 ;">
-                        <a class="nav-link navcookie" style="color: white;">Cookies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link navdrink" href="drink.html">Drinks</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link navsnack" href="snack.html">Snack</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <a id="login" href="login.php">login</button>
-                    <a href="cart.html" style="font-size:20px; text-decoration:none; color:black;"
-                        class="fa fa-shopping-cart"></a>
-                    <div id="cartAmount" class="cartAmount">0</div>
-            </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div>
+            <a class="navbar-brand" style="color:white;" href="#"><b>T-pang-bake</b></a>
+          </div>
+          <div class="collapse navbar-collapse mr-5" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link navbakery" style="color:white;" aria-current="page" href="#">Bakery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navcake" style="color:white;" href="secake.html">Cake</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navcookie" style="color:white;" href="cookies.html">Cookies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navdrink" style="color:white;" href="drink.html">Drinks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navsnack" style="color:white;" href="snack.html">Snack</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <a id="login"  style="color:white;" href="login.php"><b>Login</b></a>
+            <a href="cart.html" style="font-size:20px; text-decoration:none; color:white;" class="fa fa-shopping-cart"></a>
+            <div id="cartAmount" class="cartAmount">0</div>
+          </div>
         </div>
         </div>
-    </nav>
-    <div id="log-out">log out</div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div id="label" class="text-center"></div>
-                <div class="shopping-cart" id="shopping-cart"></div>
+      </nav>
+      <div id="log-out">log out</div>
+    <div class="container px-6" style="margin-top: 100px;">
+        <div class="row gx-5">
+            <div class="col-md-8">
+                <div class="">
+                    <h1>Product list</h1>
+                </div>
+                <div class="row justify-content-center mb-3 mt-3" id="product">
+
+                </div>
             </div>
-            <div class="col-lg-6">ken</div>
+            <div class="col-md-4 p-3">
+                <div class="customers p-3b border rounded-3 p-3" style="background-color: rgb(251, 251, 251);">
+                    <h3 style="text-align:center;">delivery</h3>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                            value="option1" onclick="show()" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Address as previously applied
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2" onclick="show()">
+                        <label class="form-check-label" for="exampleRadios2">
+                            new address
+                        </label>
+                    </div>
+                    <h5>Address</h5>
+                    <div class="p-3" id="delivery-address"></div>
+                    <hr>
+                    <h3 style="text-align:center;">summary</h3>
+                    <div class="p-3 justify-content-between" id="product">
+                        <p class="d-flex justify-content-between">Cupcake<span>130฿</span></p>
+                        <p style="text-align: right; margin-top: -10px; color: rgb(156, 164, 169);">x2</p>
+                        <p class="d-flex justify-content-between">Cupcake<span>130฿</span></p>
+                        <p style="text-align: right; margin-top: -10px; color: rgb(156, 164, 169);">x2</p>
+                        <p class="d-flex justify-content-between">Cupcake<span>130฿</span></p>
+                        <p style="text-align: right; margin-top: -10px; color: rgb(156, 164, 169);">x2</p>
+                        <p class="d-flex justify-content-between">Cupcake<span>130฿</span></p>
+                        <p style="text-align: right; margin-top: -10px; color: rgb(156, 164, 169);">x2</p>
+                        <h6 class="d-flex justify-content-between">Subtotal:<span>250฿</span></h6>
+                        <h6 class="d-flex justify-content-between">Shipping Fee:<span>50฿</span></h6>
+                    </div>
+                    <hr>
+                    <h4 class="p-3 d-flex justify-content-between">total:<span style="color: red;">300฿</span></h4>
+                    <hr>
+                    <h5 style="text-align: center;">ตอนนี้ระบบมีเเค่เก็บเงินปลายทางเท่านั้น</h5>
+                    <hr>
+                    <input type="submit" name="SUBMIT" value="Login" class="btn btn-warning" style="width:100%;"><br>
+                </div>
+            </div>
         </div>
     </div>
+    <footer class="site-footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-6">
+                    <h6>About</h6>
+                    <p class="text-justify"></p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Categories</h6>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/category/c-language/">Bakery</a></li>
+                        <li><a href="secake.html">cake</a></li>
+                        <li><a href="cookies.html">Cookie</a></li>
+                        <li><a href="drink.html">Drink</a></li>
+                        <li><a href="snack.html">Snack</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">made by T-pang bakery
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="src/Data.js"></script>
 <script src="src/checkout.js"></script>
+<script>
+    var radios = document.getElementsByName('exampleRadios');
+    if (radios[0].checked) {
+        document.getElementById("delivery-address").innerHTML = '<p>216 ขุมทอง-ลำต้อยติ่ง ต.ขุมทอง อ.ลาดกระบัง จ.กรุงเทพ 10520</p>' 
+    }
+    if (radios[1].checked){
+        document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
+    }
+    function show(){
+        if (radios[0].checked) {
+            document.getElementById("delivery-address").innerHTML = '<p>216 ขุมทอง-ลำต้อยติ่ง ต.ขุมทอง อ.ลาดกระบัง จ.กรุงเทพ 10520</p>'
+        }
+        if (radios[1].checked){
+            document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
+        }
+    }
+</script>
 
 </html>
