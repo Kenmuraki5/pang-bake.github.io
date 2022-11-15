@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <title>T-Pang-Bake</title>
 </head>
+<?php
+    session_start();
+?>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark " style="position: fixed; z-index: 1000; top:0; width: 100%; background-color: black;">
         <div class="container-fluid">
