@@ -1,4 +1,6 @@
-let ShoppingCart = document.getElementById("product");
+let product = document.getElementById("product");
+let summary = document.getElementById("summary");
+let t_amount = document.getElementById("totalprice");
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 let calculation = () => {
@@ -7,9 +9,9 @@ let calculation = () => {
 };
 
 calculation();
-let generateCartItems = () => {
+let generateproductall = () => {
   if (basket.length !== 0) {
-    return (ShoppingCart.innerHTML = basket
+    return (product.innerHTML = basket
       .map((x) => {
         let { id, item } = x;
         let search = Bestseller.find((y) => y.id === id) || neww.find((x) => x.id === id) || ButterCake.find((x) => x.id === id)||
@@ -57,50 +59,28 @@ let generateCartItems = () => {
       `;
       })
       .join(""));
-  } else {
-    ShoppingCart.innerHTML = ``;
-    label.innerHTML = `
-    <h2>Cart is Empty</h2>
-    <a href="index.html">
-      <button class="HomeBtn">Back to home</button>
-    </a>
-    `;
   }
 };
+generateproductall();
 
-generateCartItems();
-
-let increment = (id) => {
-  let selectedItem = id;
-  let search = basket.find((x) => x.id === selectedItem.id);
-
-  if (search === undefined) {
-    basket.push({
-      id: selectedItem.id,
-      item: 1,
-    });
-  } else {
-    search.item += 1;
+let generatesummary = () => {
+  if (basket.length !== 0) {
+    return (summary.innerHTML = basket
+      .map((x) => {
+        let { id, item } = x;
+        let search = Bestseller.find((y) => y.id === id) || neww.find((x) => x.id === id) || ButterCake.find((x) => x.id === id)||
+        icecreamecake.find((x) => x.id === id) || cookies.find((x) => x.id === id) || Milk.find((x) => x.id === id) || 
+        Juice.find((x) => x.id === id) || Tea.find((x) => x.id === id) || Coffee.find((x) => x.id === id) ||
+        snack.find((x) => x.id === id) ||[];
+        return `
+        <p class="d-flex justify-content-between">Cupcake<span>${search.price}฿</span></p>
+        <p style="text-align: right; margin-top: -10px; color: rgb(156, 164, 169);">x${item}</p>
+      `;
+      })
+      .join(""));
   }
-
-  generateCartItems();
-  update(selectedItem.id);
-  localStorage.setItem("data", JSON.stringify(basket));
 };
-let decrement = (id) => {
-  let selectedItem = id;
-  let search = basket.find((x) => x.id === selectedItem.id);
-
-  if (search === undefined) return;
-  else if (search.item === 0) return;
-  else {
-    search.item -= 1;
-  }
-  update(selectedItem.id);
-  basket = basket.filter((x) => x.item !== 0);
-  generateCartItems();
-  localStorage.setItem("data", JSON.stringify(basket));
-};
+generatesummary();
 
 let update = (id) => {
   let search = basket.find((x) => x.id === id);
@@ -108,21 +88,6 @@ let update = (id) => {
   document.getElementById(id).innerHTML = search.item;
   calculation();
   TotalAmount();
-};
-
-let removeItem = (id) => {
-  let selectedItem = id;
-  // console.log(selectedItem.id);
-  basket = basket.filter((x) => x.id !== selectedItem.id);
-  generateCartItems();
-  TotalAmount();
-  localStorage.setItem("data", JSON.stringify(basket));
-};
-
-let clearCart = () => {
-  basket = [];
-  generateCartItems();
-  localStorage.setItem("data", JSON.stringify(basket));
 };
 
 let TotalAmount = () => {
@@ -138,11 +103,8 @@ let TotalAmount = () => {
         return item * search.price;
       })
       .reduce((x, y) => x + y, 0);
-    // console.log(amount);
-    label.innerHTML = `
-    <h2>Total Bill : $ ${amount}</h2>
-    <button class="checkout">Checkout</button>
-    <button onclick="clearCart()" class="removeAll">Clear Cart</button>
+    t_amount.innerHTML = `
+    <h4 class="p-3 d-flex justify-content-between">total:<span style="color: red;">${amount}฿</span></h4>
     `;
   } else return;
 };
