@@ -73,14 +73,14 @@
                     <form method="POST">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                                value="option1" checked>
+                                value="option1" <?php echo 'onclick="showaddress()"';?> checked>
                             <label class="form-check-label" for="exampleRadios1">
                                 Address as previously applied
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                value="option2">
+                                value="option2" <?php echo 'onclick="showaddress()"';?>>
                             <label class="form-check-label" for="exampleRadios2">
                                 New address
                             </label>
@@ -171,14 +171,7 @@
        $Address = $row['ADDRESS'];
     }
     // Close database
-    echo 'alert('."$Address".')';
-    if (!empty($_POST["exampleRadios"]))
-        echo `<script>if (radios[0].checked) {
-                document.getElementById("delivery-address").innerHTML = '<p><?php echo "$Address"; ?></p>' 
-            }
-            if (radios[1].checked){
-                document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
-            } <script>`;
+    $db->close();
 ?>
 <script>
     var radios = document.getElementsByName('exampleRadios');
@@ -187,6 +180,14 @@
     }
     if (radios[1].checked){
         document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
+    }
+    function showaddress(){
+        if (radios[0].checked) {
+        document.getElementById("delivery-address").innerHTML = '<p><?php echo "$Address"; ?></p>' 
+        }
+        if (radios[1].checked){
+            document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
+        }
     }
 </script>
 </html>
