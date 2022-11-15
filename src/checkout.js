@@ -1,6 +1,7 @@
 let product = document.getElementById("product");
 let summary = document.getElementById("summary");
 let t_amount = document.getElementById("totalprice");
+let num = 0;
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 let calculation = () => {

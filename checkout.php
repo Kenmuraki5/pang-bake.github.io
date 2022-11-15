@@ -176,7 +176,7 @@
 <script>
     var radios = document.getElementsByName('exampleRadios');
     if (radios[0].checked) {
-        document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" value="<?php echo "$Address"; ?>"required ></textarea>'
+        document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ><?php echo "$Address"; ?></textarea>'
     }
     if (radios[1].checked){
         document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
