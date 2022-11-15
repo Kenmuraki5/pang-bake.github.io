@@ -75,13 +75,15 @@
                             Address as previously applied
                         </label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                            value="option2" onclick="show()">
-                        <label class="form-check-label" for="exampleRadios2">
-                            New address
-                        </label>
-                    </div>
+                    <form method="POST">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                New address
+                            </label>
+                        </div>
+                    </form>
                     <h5>Address</h5>
                     <div class="p-3 d-flex justify-content-center" id="delivery-address"></div>
                     <hr>
@@ -168,8 +170,7 @@
     }
     // Close database
     $db->close();
-?>
-<script>
+    echo`<script>
     if (localStorage.getItem('Username')== null){
         window.location.replace('login.php');
     }
@@ -182,6 +183,7 @@
             document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
         }
     }
-</script>
+    </script>`
+?>
 
 </html>
