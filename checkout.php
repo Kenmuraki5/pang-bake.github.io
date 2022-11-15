@@ -164,7 +164,7 @@
 
     $ret = $db->query($sql);
     while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
-       $address = $row['ADDRESS'];
+       $Address = $row['ADDRESS'];
     }
     // Close database
     $db->close();
@@ -175,7 +175,7 @@
     }
     var radios = document.getElementsByName('exampleRadios');
     if (radios[0].checked) {
-        document.getElementById("delivery-address").innerHTML = <?php echo"<p>".$address."<p>"; ?> 
+        document.getElementById("delivery-address").innerHTML = "<?php echo $Address; ?>"
     }
     if (radios[1].checked){
         document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
