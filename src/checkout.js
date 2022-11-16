@@ -70,7 +70,7 @@ let generateproductall = () => {
                               <span style="color:red;">${item * search.price} ฿<span>
                             </h5>
                         </div>
-                        <div class="col-md-12 col-lg-3 col-xl-3 border-sm-start-none border-start" style="overflow:scroll;">
+                        <div class="col-md-12 col-lg-3 col-xl-3 border-sm-start-none border-start">
                             <div class="d-flex justify-content-between mt-4">
                                 <h6 class="text-success">price</h6>
                                 <div class="div">
