@@ -163,7 +163,8 @@
 
     // Open Database 
     $db = new MyDB();
-    $sql ="SELECT * from COMPANY WHERE USERNAME = '<script>document.write(localStorage.getItem('client'))</script>'";
+    $Username = $_SESSION["Username"];
+    $sql ="SELECT * from COMPANY WHERE USERNAME = '$Username'";
 
     $ret = $db->query($sql);
     while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
