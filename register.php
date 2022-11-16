@@ -66,7 +66,7 @@
     .inputBox input:focus ~ span
     {
         color: black;
-        transform: translateX(10px) translateY(-10px);
+        transform: translateX(10px) translateY(-14px);
         font-size: 1em;
         padding: 0 5px;
         background: #fff;
@@ -75,7 +75,7 @@
     .inputBox textarea:focus ~ span
     {
         color: black;
-        transform: translateX(10px) translateY(-10px);
+        transform: translateX(10px) translateY(-14px);
         font-size: 1em;
         padding: 0 5px;
         background: #fff;
