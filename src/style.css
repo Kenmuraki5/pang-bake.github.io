@@ -508,7 +508,7 @@ img {
 
 /*Start fixed-image*/
 .fixed-image {
-  background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988533/frontpage-menu.jpg") fixed center;
+  background: url("/images/recommend-back.jpg") fixed center;
   background-size: cover;
   height: 400px;
 }
