@@ -406,3 +406,147 @@ a {
     font-weight:600
   }
 }
+
+
+
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+
+/*End Global*/
+
+
+.menu .box-model, .menu .text, .fixed-image .text {
+  text-align: center;
+}
+.menu, .menu .menu-image-container{
+  display: flex;
+}
+.fixed-image .text{
+  position: relative;
+}
+.fixed-image .text{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/*Start Menu*/
+.menu {
+  padding: 60px;
+}
+.menu .box-model {
+  display: none;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  z-index: 20;
+  background-color: rgba(0,0,0,.7);
+}
+.menu .box-model.active {
+  display: block;
+}
+.menu .box-model.active body {
+  overflow: hidden;
+}
+.menu .box-model .close {
+  color: #ccc;
+  right: 25px;
+  top: 10px;
+  z-index: 20;
+}
+.menu .box-model .arrow .arrow-right,.menu .box-model .arrow .arrow-left {
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  top: 50%;
+  border-right: 2px solid #fff;
+  border-top: 2px solid #fff;
+  transform: rotate(45deg);
+  z-index: 20;
+}
+.menu .box-model .arrow .arrow-left {
+  left: 20px;
+  transform: rotate(-135deg);
+}
+.menu .box-image-container {
+  height: 100%;
+}
+.menu .box-image-container .box-image img.active {
+  animation: scale .5s;
+}
+@keyframes scale {
+  from {transform: scale(0,0)}
+  to {transform: scale(1,1)}
+}
+.menu .menu-image-container {
+  flex-wrap: wrap;
+  flex: 60%;
+}
+.menu .menu-image-container .image {
+  margin: 0 20px 20px 0;
+  flex: calc( 50% - 40px);
+}
+.menu .text {
+  flex: 55%;
+  padding: 40px 0 0 62px;
+}
+.menu .text h3 {
+  color: #000;
+}
+.menu .text .fa-asterisk {
+  color: #9a9998;
+}
+/*End Menu*/
+
+/*Start fixed-image*/
+.fixed-image {
+  background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988533/frontpage-menu.jpg") fixed center;
+  background-size: cover;
+  height: 400px;
+}
+/*End fixed-image*/
+@media (max-width: 1200px) {
+  .menu, .about-us, .reservation {
+      padding: 60px 40px;
+  }
+  .about-us .text, .reservation .text {
+      padding: 0 32px 0 0;
+  }
+  .about-us .image-container, .reservation .image-container {
+      align-items: center;
+  }
+  .menu .text {
+      padding: 0 0 0 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+      padding: 0;
+  }
+  .dots {
+      display: none;
+  }
+  .about-us .text , .reservation .text {
+      padding: 0 0 40px;
+  }
+  .about-us .image-container .image1, .reservation .image-container .image1 {
+      margin-left: 0;
+  }
+  .menu {
+      display: block;
+      padding: 60px 20px 60px 40px;
+  }
+  .menu .text {
+      padding: 20px 20px 0 0;
+  }
+}
+/*End Home Page Responsive*/
