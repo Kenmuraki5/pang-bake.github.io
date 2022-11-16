@@ -152,7 +152,6 @@
 <script src="src/Data.js"></script>
 <script src="src/checkout.js"></script>
 <?php
-    session_start();
     class MyDB extends SQLite3 {
         function __construct() {
         $this->open('user.db');
