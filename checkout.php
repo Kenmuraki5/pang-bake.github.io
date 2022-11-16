@@ -90,6 +90,7 @@
                     <h5>Address</h5>
                     <form method="POST">
                         <div class="p-3 d-flex justify-content-center" id="delivery-address"></div>
+                        <button type="button" class="btn btn-outline-success" <?php echo 'onclick="getlocation()"';?>>Get location</button>
                         <hr>
                         <div id="d" style="display: none;">
                             
@@ -222,13 +223,27 @@
             document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
         }
     }
+
+    function getlocation(){
+        const success = (position) =>{
+            console.log(position)
+            const latitude = position.coords.latitude
+            const longitude = position.coords.longitude
+            document.getElementById("delivery-address").innerHTML = `<textarea rows="5" cols="30" name="Address" readonly>latitude : ${latitude}, longtitude : ${longitude}</textarea>`
+        }
+        const error = () =>{
+            alert("Unable to retrieve your location")
+        }
+        navigator.geolocation.getCurrentPosition(success, error);
+    }
+
     function create_data(){
       let data_1 = document.getElementById('d')
       let prod = localStorage.getItem('data')
       let total = document.getElementById('total').getInnerHTML()
       data_1.innerHTML = `<textarea rows="5" cols="30" name="order" readonly>${prod}</textarea>`
       document.getElementById('b').innerHTML = `<textarea rows="5" cols="30" name="amount" readonly>${total}</textarea>`
-}
-create_data();
+    }
+    create_data();
 </script>
 </html>
