@@ -89,8 +89,13 @@
                     </div>
                     <h5>Address</h5>
                     <form method="POST">
-                        <div class="p-3 d-flex justify-content-center" id="delivery-address"></div>
-                        <button type="button" class="btn btn-outline-success" <?php echo 'onclick="getlocation()"';?>>Get location</button>
+                        <div class="p-3 d-flex justify-content-center flex-column" id="delivery-address"></div>
+                        <div class="form-group row mt-3">
+                            <label for="Phone" class="col-sm-2 col-form-label">Phone:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="phone" placeholder="Phone number">
+                            </div>
+                        </div>
                         <hr>
                         <div id="d" style="display: none;">
                             
@@ -185,6 +190,7 @@
     if(isset($_POST['SUBMIT'])){
       $prod = ($_POST['order']) ;
       $total = ($_POST['amount']) ;
+      $phone = ($_POST['phone']);
       $Address_2 = htmlentities($_POST['Address']) ;
       $Username_2 = $_SESSION["Username"];
       $sql =  <<<EOF
@@ -213,23 +219,22 @@
         document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" readonly><?php echo "$Address"; ?></textarea>'
     }
     if (radios[1].checked){
-        document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
+        document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea><button type="button" class="btn btn-outline-success mt-2" <?php echo 'onclick="getlocation()"';?>>Get location</button>'
     }
     function showaddress(){
         if (radios[0].checked) {
         document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" readonly><?php echo "$Address"; ?></textarea>'
         }
         if (radios[1].checked){
-            document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
+            document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea><button type="button" class="btn btn-outline-success mt-2" <?php echo 'onclick="getlocation()"';?>>Get location</button>'
         }
     }
 
     function getlocation(){
         const success = (position) =>{
-            console.log(position)
             const latitude = position.coords.latitude
             const longitude = position.coords.longitude
-            document.getElementById("delivery-address").innerHTML = `<textarea rows="5" cols="30" name="Address" readonly>latitude : ${latitude}, longtitude : ${longitude}</textarea>`
+            document.getElementById("delivery-address").innerHTML = `<textarea rows="5" cols="30" name="Address" readonly>latitude: ${latitude}, longitude: ${longitude}</textarea><button type="button" class="btn btn-outline-success mt-2" <?php echo 'onclick="getlocation()"';?>>Get location</button>`
         }
         const error = () =>{
             alert("Unable to retrieve your location")
