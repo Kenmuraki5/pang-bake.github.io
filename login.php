@@ -106,7 +106,7 @@
                 <div class="collapse navbar-collapse mr-5" id="navbarTogglerDemo03">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link navbakery" style="color:white;" aria-current="page" href="#">Bakery</a>
+                            <a class="nav-link navbakery" style="color:white;" aria-current="page" href="bakery.html">Bakery</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link navcake" style="color:white;" href="secake.html">Cake</a>
