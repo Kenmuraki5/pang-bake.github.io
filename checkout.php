@@ -18,6 +18,9 @@
 <?php
     session_start();
     if(empty($_SESSION["Username"])){
+        echo '<script type="text/javascript">';
+            echo 'alert("You have taken too long to pay. Please login again.")';  
+        echo '</script>';
         header("Location: login.php");
     }
 ?>
