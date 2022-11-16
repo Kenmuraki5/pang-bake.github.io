@@ -17,6 +17,9 @@
 </head>
 <?php
     session_start();
+    if(empty($_SESSION["Username"])){
+        header("Location: login.php");
+    }
 ?>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark " style="position: fixed; z-index: 1000; top:0; width: 100%; background-color: black;">
@@ -155,9 +158,6 @@
 <script src="src/Data.js"></script>
 <script src="src/checkout.js"></script>
 <?php
-    if(empty($_SESSION["Username"])){
-        header("Location: login.php");
-    }
     class MyDB extends SQLite3 {
         function __construct() {
         $this->open('user.db');
