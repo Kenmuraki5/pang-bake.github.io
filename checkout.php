@@ -152,6 +152,7 @@
 <script src="src/Data.js"></script>
 <script src="src/checkout.js"></script>
 <?php
+    session_start();
     class MyDB extends SQLite3 {
         function __construct() {
         $this->open('user.db');
@@ -160,8 +161,8 @@
 
     // Open Database 
     $db = new MyDB();
-    $Username = "<script>document.write(localStorage.getItem('Username'));</script>";
-    $sql ="SELECT * from COMPANY WHERE USERNAME == '$Username'";
+    $Username = $_SESSION["Username"];
+    $sql ="SELECT * from COMPANY WHERE USERNAME = '$Username'";
 
     $ret = $db->query($sql);
     while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
