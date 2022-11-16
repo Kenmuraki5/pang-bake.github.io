@@ -29,12 +29,12 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div>
-            <a class="navbar-brand" style="color:white;" href="#"><b>T-pang-bake</b></a>
+            <a class="navbar-brand" style="color:white;" href="index.html"><b>T-pang-bake</b></a>
           </div>
           <div class="collapse navbar-collapse mr-5" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link navbakery" style="color:white;" aria-current="page" href="index.html">Bakery</a>
+                <a class="nav-link navbakery" style="color:white;" aria-current="page" href="#">Bakery</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link navcake" style="color:white;" href="secake.html">Cake</a>
