@@ -62,6 +62,7 @@ a {
   right:10px; 
   z-index: 1000;
   padding-top: 20px;
+  border-radius: 6px;
 }
 .fa-user-circle:hover{
   transition: all .3s;
