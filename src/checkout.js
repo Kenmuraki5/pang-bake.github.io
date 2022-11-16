@@ -51,7 +51,7 @@ let generateproductall = () => {
                         <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
                             <div class="bg-image hover-zoom ripple rounded ripple-surface">
                                 <img src="${search.img}"
-                                    class="w-100" />
+                                    class="img-checkout"/>
                                 <a href="#!">
                                     <div class="hover-overlay">
                                         <div class="mask"

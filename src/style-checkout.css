@@ -388,3 +388,12 @@ a {
     font-weight:600
   }
 }
+.img-checkout{
+  width: 100%;
+}
+
+@media (max-width:765px) {
+  .img-checkout{
+    width: 60%;
+  }
+}
