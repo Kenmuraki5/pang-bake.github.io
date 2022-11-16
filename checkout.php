@@ -191,12 +191,12 @@
                     VALUES ('$Username_2','$prod','$Address_2','$total');
                  EOF;
       $ret = $db->exec($sql);
-            // echo '<script type="text/javascript">';
-            // echo 'alert("We got your order.")';  
-            // echo '</script>';
-            // echo '<script type="text/javascript">';
-            // echo    'window.location="index.html"';
-            // echo '</script>';
+            echo '<script type="text/javascript">';
+            echo 'alert("We got your order.")';  
+            echo '</script>';
+            echo '<script type="text/javascript">';
+            echo    'window.location="index.html"';
+            echo '</script>';
     }
 
 
