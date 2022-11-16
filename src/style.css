@@ -508,7 +508,7 @@ img {
 
 /*Start fixed-image*/
 .fixed-image {
-  background: url("/images/recommend-back.jpg") fixed center;
+  background: url("/images/recommend-back.png") fixed center;
   background-size: cover;
   height: 400px;
 }
