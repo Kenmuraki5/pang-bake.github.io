@@ -209,14 +209,14 @@
 <script>
     var radios = document.getElementsByName('exampleRadios');
     if (radios[0].checked) {
-        document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ><?php echo "$Address"; ?></textarea>'
+        document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" readonly><?php echo "$Address"; ?></textarea>'
     }
     if (radios[1].checked){
         document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
     }
     function showaddress(){
         if (radios[0].checked) {
-        document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ><?php echo "$Address"; ?></textarea>'
+        document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" readonly><?php echo "$Address"; ?></textarea>'
         }
         if (radios[1].checked){
             document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
@@ -226,8 +226,8 @@
       let data_1 = document.getElementById('d')
       let prod = localStorage.getItem('data')
       let total = document.getElementById('total').getInnerHTML()
-      data_1.innerHTML = `<textarea rows="5" cols="30" name="order" required >${prod}</textarea>`
-      document.getElementById('b').innerHTML = `<textarea rows="5" cols="30" name="amount" required >${total}</textarea>`
+      data_1.innerHTML = `<textarea rows="5" cols="30" name="order" readonly>${prod}</textarea>`
+      document.getElementById('b').innerHTML = `<textarea rows="5" cols="30" name="amount" readonly>${total}</textarea>`
 }
 create_data();
 </script>
