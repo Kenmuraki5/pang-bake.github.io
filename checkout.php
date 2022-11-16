@@ -34,7 +34,7 @@
           <div class="collapse navbar-collapse mr-5" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link navbakery" style="color:white;" aria-current="page" href="bakery.html">Bakery</a>
+                <a class="nav-link navbakery" style="color:white;" aria-current="page" href="#">Bakery</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link navcake" style="color:white;" href="secake.html">Cake</a>
@@ -91,6 +91,9 @@
                     <form method="POST">
                         <div class="p-3 d-flex justify-content-center" id="delivery-address"></div>
                         <hr>
+                        <div id="d" style="display: none;">
+                            
+                        </div>
                         <h3 style="text-align:center;">Summary</h3>
                         <!-- ส่วนของ summart -->
                         <div class="p-3 justify-content-between" id="summary"></div>
@@ -117,8 +120,8 @@
                 <div class="col-xs-6 col-md-3">
                     <h6>Categories</h6>
                     <ul class="footer-links">
-                        <li><a href="bakery.html">Bakery</a></li>
-                        <li><a href="secake.html">Cake</a></li>
+                        <li><a href="http://scanfcode.com/category/c-language/">Bakery</a></li>
+                        <li><a href="secake.html">cake</a></li>
                         <li><a href="cookies.html">Cookie</a></li>
                         <li><a href="drink.html">Drink</a></li>
                         <li><a href="snack.html">Snack</a></li>
@@ -166,16 +169,39 @@
 
     // Open Database 
     $db = new MyDB();
+    
     $Username = $_SESSION["Username"];
     $sql ="SELECT * from COMPANY WHERE USERNAME = '$Username'";
-
     $ret = $db->query($sql);
     while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
        $Address = $row['ADDRESS'];
+       
     }
+    
+    if(isset($_POST['SUBMIT'])){
+      $prod = ($_POST['order']) ;
+      $Address_2 = htmlentities($_POST['Address']) ;
+      $Username_2 = $_SESSION["Username"];
+      $sql =  <<<EOF
+                    INSERT INTO USER (USERNAME,PRODUCT,ADDRESS)
+                    VALUES ('$Username_2','$prod','$Address_2');
+                 EOF;
+      $ret = $db->exec($sql);
+            echo '<script type="text/javascript">';
+            echo 'alert("We got your order.")';  
+            echo '</script>';
+            echo '<script type="text/javascript">';
+            echo    'window.location="index.html"';
+            echo '</script>';
+    }
+
+
     // Close database
     $db->close();
 ?>
+
+
+
 <script>
     var radios = document.getElementsByName('exampleRadios');
     if (radios[0].checked) {
@@ -192,5 +218,11 @@
             document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea>'
         }
     }
+    function create_data(){
+      let data_1 = document.getElementById('d')
+      let prod = localStorage.getItem('data')
+      data_1.innerHTML = `<textarea rows="5" cols="30" name="order" required >${prod}</textarea>`
+}
+create_data();
 </script>
 </html>
