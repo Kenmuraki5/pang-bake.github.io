@@ -70,7 +70,7 @@ let generateproductall = () => {
                               <span style="color:red;">${item * search.price} ฿<span>
                             </h5>
                         </div>
-                        <div class="col-md-12 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                        <div class="col-md-12 col-lg-3 col-xl-3 border-sm-start-none border-start" >
                             <div class="d-flex justify-content-between mt-4">
                                 <h6 class="text-success">price</h6>
                                 <div class="div">
@@ -132,9 +132,10 @@ let TotalAmount = () => {
       })
       .reduce((x, y) => x + y, 0);
     t_amount.innerHTML = `
-    <h4 class="p-3 d-flex justify-content-between">Total:<span style="color: red;">${amount}฿</span></h4>
+    <h4 class="p-3 d-flex justify-content-between" >Total:<span style="color: red;" id = "total">${amount}฿</span></h4>
     `;
   } else return;
 };
 
 TotalAmount();
+

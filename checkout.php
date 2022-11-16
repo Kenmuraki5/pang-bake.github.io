@@ -100,6 +100,9 @@
                         <hr>
                         <!-- ส่วนของ ราคารวม -->
                         <div id="totalprice"></div>
+                        <div id="b" style="display: none;">
+                            
+                        </div>
                         <hr>
                         <h6 style="text-align: center; color: rgb(229, 48, 78);">Now the system only has cash on delivery.</h6>
                         <hr>
@@ -180,19 +183,20 @@
     
     if(isset($_POST['SUBMIT'])){
       $prod = ($_POST['order']) ;
+      $total = ($_POST['amount']) ;
       $Address_2 = htmlentities($_POST['Address']) ;
       $Username_2 = $_SESSION["Username"];
       $sql =  <<<EOF
-                    INSERT INTO USER (USERNAME,PRODUCT,ADDRESS)
-                    VALUES ('$Username_2','$prod','$Address_2');
+                    INSERT INTO USER (USERNAME,PRODUCT,ADDRESS,TOTAL)
+                    VALUES ('$Username_2','$prod','$Address_2','$total');
                  EOF;
       $ret = $db->exec($sql);
-            echo '<script type="text/javascript">';
-            echo 'alert("We got your order.")';  
-            echo '</script>';
-            echo '<script type="text/javascript">';
-            echo    'window.location="index.html"';
-            echo '</script>';
+            // echo '<script type="text/javascript">';
+            // echo 'alert("We got your order.")';  
+            // echo '</script>';
+            // echo '<script type="text/javascript">';
+            // echo    'window.location="index.html"';
+            // echo '</script>';
     }
 
 
@@ -221,7 +225,9 @@
     function create_data(){
       let data_1 = document.getElementById('d')
       let prod = localStorage.getItem('data')
+      let total = document.getElementById('total').getInnerHTML()
       data_1.innerHTML = `<textarea rows="5" cols="30" name="order" required >${prod}</textarea>`
+      document.getElementById('b').innerHTML = `<textarea rows="5" cols="30" name="amount" required >${total}</textarea>`
 }
 create_data();
 </script>
