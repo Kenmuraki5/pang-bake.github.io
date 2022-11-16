@@ -155,7 +155,7 @@
 <script src="src/Data.js"></script>
 <script src="src/checkout.js"></script>
 <?php
-    if($_SESSION["Username"] == null){
+    if(!empty($_SESSION["Username"])){
         header("Location: login.php");
     }
     class MyDB extends SQLite3 {
