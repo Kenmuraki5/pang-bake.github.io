@@ -430,7 +430,7 @@ let Bread = [
     name: "MelonPan Bread",
     price: 100,
     desc: "เมล่อนปัง คือลูกครึ่งระหว่างขนมปังกับคุกกี้ ด้านในจะเป็นขนมปังนุ่มๆ ส่วนด้านนอกจะหุ้มด้วยคุกกี้กรอบคลุกน้ำตาล ทำให้มีสัมผัสกรอบนอกนุ่มในอันเป็นเอกลักษณ์",
-    img: "images/bakery-page/bread/Melonpan.jpg",
+    img: "images/bakery-page/bread/MelonPan.jpg",
   },
   {
     id: "bread4",
@@ -456,42 +456,42 @@ let Bread = [
 ];
 let Croissant = [
   {
-    id: "bread1",
+    id: "croissant1",
     name: "T-pang Croissant",
     price: 80,
     desc: "ครัวซองต์ ต้นตำหรับ หอม กรอบ สามารถไปต่อยอดทำเมนูต่างๆได้อีกด้วย",
     img: "images/bakery-page/croissant/original.jpg",
   },
   {
-    id: "bread2",
+    id: "croissant2",
     name: "Matcha Croissant",
     price: 90,
     desc: "ครัวซองต์มัทฉะ กรอบ หอมๆ หวานน้่อยๆ ทานคู่กับชาร้อนๆ เข้ากันได้ดี ทานแล้วเมื่อย้อนกลับไปอยู่ที่แดนอาทิตย์อุทัย",
     img: "images/bakery-page/croissant/matcha.jpg",
   },
   {
-    id: "bread3",
+    id: "croissant3",
     name: "Chocolate Croissant",
     price: 100,
     desc: "ครัวซองต์ช็อกโกแลต หวานน้อย รสช็อกโกแลตเข้มๆ กรอบ อร่อยทานได้ทุกวัน",
     img: "images/bakery-page/croissant/chocolate.jpg",
   },
   {
-    id: "bread4",
+    id: "croissant4",
     name: "Almond Croissant",
     price: 85,
     desc: "ครัวซองต์อัลมอนด์ หอม กรอบ อร่อย มีอัลมอนด์กรุบกรอบ ช่วยเพื่มสัมผัส",
     img: "images/bakery-page/croissant/almond.jpg",
   },
   {
-    id: "bread5",
+    id: "croissant5",
     name: "Strawberry Croissant",
     price: 45,
     desc: "ครัวซองต์สตรอว์เบอร์รี กรอบ หอม หวาน สตรอว์เบอร์รีแท้ๆ จาก ฮอกไกโด",
     img: "images/bakery-page/croissant/strawberry.jpg",
   },
   {
-    id: "bread6",
+    id: "croissant6",
     name: "Ham and Cheese Croissant",
     price: 85,
     desc: "ครัวซองต์แฮมชีส เป็นครัวซองต์ที่เป็นของคาว อิ่มท้อง พร้อมเป็นมื้อเช้าสำหรับทุกคน",
@@ -500,7 +500,7 @@ let Croissant = [
 ];
 let Eclair = [
   {
-    id: "bread1",
+    id: "eclair1",
     name: "Classic Eclair",
     price: 80,
     desc: "คลาสสิคเอแคร์ กรอบ หอม สามารถไปต่อยอดทำเมนูต่างๆได้อีกด้วย",
@@ -509,35 +509,35 @@ let Eclair = [
 
   },
   {
-    id: "bread2",
+    id: "eclair2",
     name: "Chocolate Eclair",
     price: 90,
     desc: "เอแคร์ช็อกโกแล้ต เมนูยอดฮิตของ เอแคร์ ช็อกโกแลตเข้มข้น ทานคู่กับเครื่องดื่ม",
     img: "images/bakery-page/eclair/chocolate.jpg",
   },
   {
-    id: "bread3",
+    id: "eclair3",
     name: "Strawberry Eclair",
     price: 100,
     desc: "เอแคร์สตรอว์เบอร์รี สตรอว์เบอร์รีแท้ๆจากฮอกไกโด สอดใส้ครีมจากนมฮอกไกโด หวานมันจากครีม เปรี้ยวหวานตัดรสจากสตรอว์เบอร์รี เข้ากันอย่างลงตัว",
     img: "images/bakery-page/eclair/strawberry.jpg",
   },
   {
-    id: "bread4",
+    id: "eclair4",
     name: "Matcha Eclair",
     price: 85,
     desc: "เอแคร์มัทฉะ หอมมัทฉะสุดๆ ทานคู่กับชาร้อนไปด้วยกันได้ดี",
     img: "images/bakery-page/eclair/matcha.jpg",
   },
   {
-    id: "bread5",
+    id: "eclair5",
     name: "Redvelvet Eclair",
     price: 45,
     desc: "เอแคร์เรดเวลเวต สีแปลกตาน่าทาน ไมใช่แค่หน้าตาดี รสชาติก็ดีอีกด้วย มีรสโก้โก้ วนิลลา ผสมเข้ากันอย่างลงตัว",
     img: "images/bakery-page/eclair/redvelvet.jpg",
   },
   {
-    id: "bread6",
+    id: "eclair6",
     name: "Vanilla Eclair",
     price: 85,
     desc: "เอแคร์วนิลลา หอม หวาน ทานง่าย อร่อยทานได้ทุกวัน",
