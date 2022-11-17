@@ -160,6 +160,7 @@
                         INSERT INTO COMPANY(NAME,SURNAME,USERNAME,PASSWORD,ADDRESS)
                         VALUES ('$Name', '$Surname','$Username', '$Password' ,'$Address');
                     EOF;
+                    $ret = $db->exec($sql);
                     echo '<script type="text/javascript">';
                     echo    'window.location="login.php"';
                     echo '</script>';
