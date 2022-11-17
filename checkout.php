@@ -93,7 +93,7 @@
                         <div class="form-group row mt-3">
                             <label for="Phone" class="col-sm-2 col-form-label">Phone:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="phone" placeholder="Phone number" required>
+                                <input type="number" class="form-control" name="phone" placeholder="Phone number" required>
                             </div>
                         </div>
                         <hr>
@@ -199,7 +199,10 @@
                  EOF;
       $ret = $db->exec($sql);
             echo '<script type="text/javascript">';
-            echo 'alert("We got your order.")';  
+            echo 'alert("We got your order.")';
+            echo 'basket = []';
+            echo 'generateCartItems()';
+            echo 'localStorage.setItem("data", JSON.stringify(basket));';
             echo '</script>';
             echo '<script type="text/javascript">';
             echo    'window.location="index.html"';
