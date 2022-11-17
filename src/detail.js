@@ -59,7 +59,7 @@ let generatedetail = () => {
                   <div>
                     <div id=${dat.id} class="quantity" style="align-items:center; display:none;"></div>
                   </div>
-                  <input onclick="increment(${dat.id})" type="submit" value="add to cart" class="btn btn-lg btn-primary"/>
+                  <i class="btn" style="background-color:#5c4b44; color:white;"onclick="increment(${id})" class="bi bi-plus-lg">add to cart</i>
               </div>
             </form>
         </div>
