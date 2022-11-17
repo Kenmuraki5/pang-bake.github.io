@@ -226,7 +226,7 @@
         document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" readonly><?php echo "$Address"; ?></textarea>'
         }
         if (radios[1].checked){
-            document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required ></textarea><button type="button" class="btn btn-outline-success mt-2" <?php echo 'onclick="getlocation()"';?>>Get location</button>'
+            document.getElementById("delivery-address").innerHTML = '<textarea rows="5" cols="30" name="Address" required></textarea><button type="button" class="btn btn-outline-success mt-2" <?php echo 'onclick="getlocation()"';?>>Get location</button>'
         }
     }
 
@@ -234,7 +234,7 @@
         const success = (position) =>{
             const latitude = position.coords.latitude
             const longitude = position.coords.longitude
-            document.getElementById("delivery-address").innerHTML = `<textarea rows="5" cols="30" name="Address" readonly>latitude: ${latitude}, longitude: ${longitude}</textarea><button type="button" class="btn btn-outline-success mt-2" <?php echo 'onclick="getlocation()"';?>>Get location</button>`
+            document.getElementById("delivery-address").innerHTML = `<textarea rows="5" cols="30" name="Address" required>latitude: ${latitude}, longitude: ${longitude}</textarea><button type="button" class="btn btn-outline-success mt-2" <?php echo 'onclick="getlocation()"';?>>Get location</button>`
         }
         const error = () =>{
             alert("Unable to retrieve your location")
