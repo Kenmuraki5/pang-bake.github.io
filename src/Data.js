@@ -1,31 +1,31 @@
 let Bestseller = [
   {
-    id: "Best1",
-    name: "Cup Cake",
+    id: "Cake1",
+    name: "T-pang Crepe Cake",
     price: 45,
     desc: "หอมอร่อยมั้ง",
-    img: "https://www.noracooks.com/wp-content/uploads/2022/03/sq-3.jpg",
+    img: "images/cake-page/crepecake1.jpg",
   },
   {
-    id: "Best2",
-    name: "Chocolate Cake",
-    price: 100,
+    id: "Cake3",
+    name: "Strawberry Creame Cakes",
+    price: 60,
     desc: "ดีที่ไม่เน่า",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-xbbtOjenth-o4vYlvVB_CUXp40wW3CF2pg&usqp=CAU",
+    img: "images/cake-page/cake2.png",
   },
   {
     id: "Best3",
-    name: "Crepe Cakes",
-    price: 25,
+    name: "Chocolate Crepe Cakes",
+    price: 50,
     desc: "อย่าทิ้งเกิน 2 วันไม่งั้นมดขึ้น",
     img: "https://img.buzzfeed.com/video-api-prod/assets/bf889412d88f4cfc88748b46b5b72943/fb8.jpg?resize=1200:*",
   },
   {
-    id: "Best4",
-    name: "Brownny",
-    price: 300,
+    id: "icescreamcake1",
+    name: "Oreo Ice Creame Cake",
+    price: 80,
     desc: "กินวันนี้ ขี้พน.",
-    img: "https://scontent.xx.fbcdn.net/v/t1.15752-9/307844698_1297173247777551_2711877312343039912_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_ohc=PU0P3RFvM8cAX_D25Vn&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTWipSHqEMLiycKZtzWw6pn6cWiKLJCveKwrqNWXH6zyA&oe=637DB93E",
+    img: "images/cake-page/ice1.jpg",
   },
 ];
 let neww = [
@@ -102,7 +102,7 @@ let icecreamecake = [
   {
     id: "icescreamcake1",
     name: "Oreo Ice Creame Cake",
-    price: 50,
+    price: 80,
     desc: "หอมหวาน",
     img: "images/cake-page/ice1.jpg",
   },

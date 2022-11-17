@@ -46,7 +46,7 @@ let generateShop = () => {
       let search = basket.find((x) => x.id === id) || [];
       return `
     <div id=product-id-${id} class="item">
-        <a href="detail.html"><img width="100%" alt="${name}" src=${img} id="${id}" name="${price}" value="${desc}" onclick="savedata(this)"></a>
+        <a href="detail.html"><img width="100%" height="250px" alt="${name}" src=${img} id="${id}" name="${price}" value="${desc}" onclick="savedata(this)"></a>
         <div class="details">
           <h3>${name}</h3>
           <div class="price-quantity">
@@ -55,7 +55,7 @@ let generateShop = () => {
               <div id=${id} class="quantity" style="display:none;">
               ${search.item === undefined ? 0 : search.item}
               </div>
-              <i class="btn btn-primary" onclick="increment(${id})" class="bi bi-plus-lg">add to cart</i>
+              <i class="btn" style="background-color:#5c4b44; color:white;"onclick="increment(${id})" class="bi bi-plus-lg">add to cart</i>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@ let generatenew = () => {
               <div id=${id} class="quantity" style="display:none;">
               ${search.item === undefined ? 0 : search.item}
               </div>
-              <i class="btn btn-primary" onclick="increment(${id})" class="bi bi-plus-lg">add to cart</i>
+              <i type="button" class="btn" style="background-color:#5c4b44; color:white;"onclick="increment(${id})" class="bi bi-plus-lg">add to cart</i>
             </div>
           </div>
         </div>
