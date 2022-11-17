@@ -39,7 +39,7 @@ let generateCartItems = () => {
               <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
           </div>
 
-          <h3>$ ${item * search.price}</h3>
+          <h3>${item * search.price} ฿</h3>
         </div>
       </div>
       `;
