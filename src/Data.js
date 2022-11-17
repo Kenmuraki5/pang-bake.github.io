@@ -34,14 +34,14 @@ let neww = [
     name: "Blue Berry Cake (1 piece)",
     price: 50,
     desc: "เค้กบูลเบอลี่ ทางร้านจะเน้นรสชาติไปทางหวาน อมเปรี้ยวหน่อยครับ ด้านในจะสอดไส้ด้วยบูลเบอลี่เเละครัมเบิ้ลกรอบๆ เเทรกอยู่ด้านใต้ครับ",
-    img: "https://i.pinimg.com/564x/a3/70/bf/a370bfd77b5def867d3ca5be80e9872c.jpg",
+    img: "images/index-page/blueberrycake.jpeg",
   },
   {
     id: "new2",
     name: "Chiffon Butter Cake (1 piece)",
     price: 80,
     desc: "เค้กชีพฟ่อนนุ่มๆ เมนูใหม่ของทางร้านเลยครับ ทำผิดพลาดมาหลายครั้งกว่าจะได้สูตรที่ลงตัวครับผม เชิญรับประทานกันได้เลยครับ",
-    img: "https://scontent.xx.fbcdn.net/v/t1.15752-9/308692464_626747699129576_4075605894809072116_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=aee45a&_nc_ohc=L2TXVSKsih8AX9N2oQQ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSLMQkuagoSlomKCjXpI0w0tnB8FNX629iFoT2tteH2Uw&oe=63844283",
+    img: "images/index-page/chiffon.jpg",
   },
   {
     id: "new3",
@@ -52,10 +52,10 @@ let neww = [
   },
   {
     id: "new4",
-    name: "Croissant Spinach Cream Cheese",
+    name: "Croissant Spinach Cream Cheese (1 piece)",
     price: 400,
     desc: "อร่อยลืมเมีย",
-    img: "https://image.makewebeasy.net/makeweb/0/I1MJQjJJO/CroissantPuffPastries/Spinach_Croissant2.jpg",
+    img: "images/index-page/Spinach_Croissant2.webp",
   },
 ];
 
@@ -153,10 +153,10 @@ let cookies = [
   },
   {
     id: "cookies3",
-    name: "Cookies maison",
+    name: "Cookies Maison",
     price: 75,
     desc: "ขมปังหน้าหมา",
-    img: "https://assets.afcdn.com/recipe/20190529/93153_w1024h1024c1cx2220cy1728.jpg",
+    img: "images/cookie-page/maison.jpeg",
   },
   {
     id: "cookies4",

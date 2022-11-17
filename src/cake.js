@@ -50,6 +50,7 @@ let generatebutttercake = () => {
         <a href="detail.html"><img width="100%" height="219px" alt="${name} "src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)"></a>
         <div class="details">
           <h3>${name}</h3>
+          <h5 style="color:red;">(1 piece)</h5>
           <div class="price-quantity">
             <h2>${price} ฿</h2>
             <div class="buttons">
@@ -77,6 +78,7 @@ let generateicescreamcake = () => {
         <a href="detail.html"><img width="100%" height="219px" alt="${name} "src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)"></a>
         <div class="details">
           <h3>${name}</h3>
+          <h5 style="color:red;">(1 piece)</h5>
           <div class="price-quantity">
             <h2>${price} ฿</h2>
             <div class="buttons">
