@@ -45,7 +45,7 @@ let generateproductall = () => {
         icecreamecake.find((x) => x.id === id) || cookies.find((x) => x.id === id) || Milk.find((x) => x.id === id) || 
         Juice.find((x) => x.id === id) || Tea.find((x) => x.id === id) || Coffee.find((x) => x.id === id) ||
         snack.find((x) => x.id === id) || Bread.find((x) => x.id === id) || Croissant.find((x) => x.id === id) || 
-        Baguette.find((x) => x.id === id) || [];
+        Eclair.find((x) => x.id === id) || [];
         return `
         <div class="col-md-12 col-xl-12 mt-3">
             <div class="card shadow-0 border rounded-3">
@@ -100,7 +100,7 @@ let generatesummary = () => {
         icecreamecake.find((x) => x.id === id) || cookies.find((x) => x.id === id) || Milk.find((x) => x.id === id) || 
         Juice.find((x) => x.id === id) || Tea.find((x) => x.id === id) || Coffee.find((x) => x.id === id) ||
         snack.find((x) => x.id === id) || Bread.find((x) => x.id === id) || Croissant.find((x) => x.id === id) || 
-        Baguette.find((x) => x.id === id) || [];
+        Eclair.find((x) => x.id === id) || [];
         return `
         <p class="d-flex justify-content-between">${search.name}<span>${search.price}฿</span></p>
         <p style="text-align: right; margin-top: -10px; color: rgb(156, 164, 169);">x${item}</p>
@@ -128,7 +128,7 @@ let TotalAmount = () => {
         icecreamecake.find((x) => x.id === id) || cookies.find((x) => x.id === id) || Milk.find((x) => x.id === id) || 
         Juice.find((x) => x.id === id) || Tea.find((x) => x.id === id) || Coffee.find((x) => x.id === id) ||
         snack.find((x) => x.id === id) || Bread.find((x) => x.id === id) || Croissant.find((x) => x.id === id) || 
-        Baguette.find((x) => x.id === id) || [];
+        Eclair.find((x) => x.id === id) || [];
 
         return item * search.price;
       })

@@ -48,9 +48,10 @@ let generatebread = () => {
         let search = basket.find((x) => x.id === id) || [];
         return `
         <div id=product-id-${id} class="item">
-          <a href="detail.html"><img width="100%" alt="${name}" src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)"></a>
+          <a href="detail.html"><img width="100%" height="300px" alt="${name}" src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)"></a>
           <div class="details">
             <h3>${name}</h3>
+            <h5 style="color:red;">(1 pound)</h5>
             <div class="price-quantity">
               <h2>${price} ฿</h2>
               <div class="buttons">
@@ -75,9 +76,10 @@ let generatebread = () => {
         let search = basket.find((x) => x.id === id) || [];
         return `
         <div id=product-id-${id} class="item">
-          <a href="detail.html"><img width="100%" alt="${name}" src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)"></a>
+          <a href="detail.html"><img width="100%" height="300px" alt="${name}" src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)"></a>
           <div class="details">
             <h3>${name}</h3>
+            <h5 style="color:red;">(1 pound)</h5>
             <div class="price-quantity">
               <h2>${price} ฿</h2>
               <div class="buttons">
@@ -95,15 +97,16 @@ let generatebread = () => {
   };
   
     let generatebaguette = () => {
-      return (bakery3.innerHTML = Baguette
+      return (bakery3.innerHTML = Eclair
         .map((x) => {
           let { id, name, price, desc, img } = x;
           let search = basket.find((x) => x.id === id) || [];
           return `
           <div id=product-id-${id} class="item">
-            <a href="detail.html"><img width="100%" alt="${name}" src=${img} id="${id}" name="${price}" value="${desc}"savedata(this)"></a>
+            <a href="detail.html"><img width="100%" height="300px" alt="${name}" src=${img} id="${id}" name="${price}" value="${desc}"savedata(this)"></a>
             <div class="details">
               <h3>${name}</h3>
+              <h5 style="color:red;">(1 pound)</h5>
               <div class="price-quantity">
                 <h2>${price} ฿</h2>
                 <div class="buttons">

@@ -19,7 +19,7 @@ let generateCartItems = () => {
         icecreamecake.find((x) => x.id === id) || cookies.find((x) => x.id === id) || Milk.find((x) => x.id === id) || 
         Juice.find((x) => x.id === id) || Tea.find((x) => x.id === id) || Coffee.find((x) => x.id === id) ||
         snack.find((x) => x.id === id) || Bread.find((x) => x.id === id) || Croissant.find((x) => x.id === id) || 
-        Baguette.find((x) => x.id === id) || [];
+        Eclair.find((x) => x.id === id) || [];
         return `
       <div class="cart-item">
         <img width="130" src=${search.img} alt="" />
@@ -122,7 +122,7 @@ let TotalAmount = () => {
         icecreamecake.find((x) => x.id === id) || cookies.find((x) => x.id === id) || Milk.find((x) => x.id === id) || 
         Juice.find((x) => x.id === id) || Tea.find((x) => x.id === id) || Coffee.find((x) => x.id === id) ||
         snack.find((x) => x.id === id) || Bread.find((x) => x.id === id) || Croissant.find((x) => x.id === id) || 
-        Baguette.find((x) => x.id === id) || [];
+        Eclair.find((x) => x.id === id) || [];
 
         return item * search.price;
       })
