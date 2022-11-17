@@ -199,10 +199,8 @@
                  EOF;
       $ret = $db->exec($sql);
             echo '<script type="text/javascript">';
+            echo 'localStorage.removeItem("data");';
             echo 'alert("We got your order.")';
-            echo 'basket = []';
-            echo 'generateCartItems()';
-            echo 'localStorage.setItem("data", JSON.stringify(basket));';
             echo '</script>';
             echo '<script type="text/javascript">';
             echo    'window.location="index.html"';
