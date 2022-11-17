@@ -38,7 +38,6 @@
         body {
             /* background: linear-gradient(#ffad00,#e6a319,#cca34d); */
             background-size: cover;
-            background-image: url("/images/index-page/image2.jpeg");
         }
 
         .container {
@@ -91,7 +90,7 @@
         }
     </style>
 
-    <body>
+    <body style='background-image: url("images/index-page/image2.jpeg");'>
         <nav class="navbar navbar-expand-lg navbar-dark "
             style="position: fixed; z-index: 1000; top:0; left:0; width: 100%; background-color: black;">
             <div class="container-fluid">

@@ -28,8 +28,6 @@
     body{
         /* background: linear-gradient(#ffad00,#e6a319,#cca34d); */
         background-size: cover;
-   
-        background-image: url("/images/index-page/image2.jpeg");
         background-repeat:no-repeat;
     }
     .container {
@@ -90,7 +88,7 @@
         }
     }
 </style>
-<body>
+<body style='background-image: url("images/index-page/image2.jpeg");'>
     <div class="container" style="z-index:1000;">
         <form method="POST">
             <h2 class="title" style="font-weight: bold; text-align: center;">Register</h2>
@@ -162,8 +160,9 @@
                         INSERT INTO COMPANY(NAME,SURNAME,USERNAME,PASSWORD,ADDRESS)
                         VALUES ('$Name', '$Surname','$Username', '$Password' ,'$Address');
                     EOF;
-                    header('location: login.php');
-                    $ret = $db->exec($sql);
+                    echo '<script type="text/javascript">';
+                    echo    'window.location="login.php"';
+                    echo '</script>';
             }
         }
         
