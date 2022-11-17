@@ -194,7 +194,7 @@
       $Address_2 = htmlentities($_POST['Address']) ;
       $Username_2 = $_SESSION["Username"];
       $sql =  <<<EOF
-                    INSERT INTO USER2 (USERNAME,PRODUCT,ADDRESS,TOTAL,PHONE)
+                    INSERT INTO USER (USERNAME,PRODUCT,ADDRESS,TOTAL,PHONE)
                     VALUES ('$Username_2','$prod','$Address_2','$total', '$phone');
                  EOF;
       $ret = $db->exec($sql);
