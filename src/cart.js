@@ -29,7 +29,7 @@ let generateCartItems = () => {
               <h4 class="title-price">
                 <p>${search.name}</p>
               </h4>
-              <p class="cart-item-price">$ ${search.price}</p>
+              <p class="cart-item-price">${search.price} ฿</p>
               <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
           </div>
 
@@ -129,7 +129,7 @@ let TotalAmount = () => {
       .reduce((x, y) => x + y, 0);
     // console.log(amount);
     label.innerHTML = `
-    <h2>Total Bill : $ ${amount}</h2>
+    <h2>Total Bill : ${amount} ฿</h2>
     <button class="checkout" onclick="location.href='checkout.php'">Checkout</button>
     <button onclick="clearCart()" class="removeAll">Clear Cart</button>
     `;
