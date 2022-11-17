@@ -41,13 +41,13 @@ let savedata = (obj) => {
 };
 
 let generatebutttercake = () => {
-  return (cake1.innerHTML = ButterCake
+  return (cake1.innerHTML = Cake
     .map((x) => {
       let { id, name, price, desc, img } = x;
       let search = basket.find((x) => x.id === id) || [];
       return `
       <div id=product-id-${id} class="item">
-        <a href="detail.html"><img width="100%" alt="${name} "src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)"></a>
+        <a href="detail.html"><img width="100%" height="219px" alt="${name} "src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)"></a>
         <div class="details">
           <h3>${name}</h3>
           <div class="price-quantity">
@@ -74,7 +74,7 @@ let generateicescreamcake = () => {
       let search = basket.find((x) => x.id === id) || [];
       return `
       <div id=product-id-${id} class="item">
-        <a href="detail.html"><img width="100%" alt="${name} "src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)"></a>
+        <a href="detail.html"><img width="100%" height="219px" alt="${name} "src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)"></a>
         <div class="details">
           <h3>${name}</h3>
           <div class="price-quantity">

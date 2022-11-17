@@ -58,82 +58,81 @@ let neww = [
     img: "https://i8b2m3d9.stackpathcdn.com/wp-content/uploads/2020/08/Strawberry_Shortcake_5140sq.jpg",
   },
 ];
-let ButterCake = [
+
+// pagecake
+let Cake = [
   {
-    id: "Butter1",
-    name: "Cup Cake",
+    id: "Cake1",
+    name: "T-pang Crepe Cake",
     price: 45,
     desc: "หอมอร่อยมั้ง",
-    img: "https://www.noracooks.com/wp-content/uploads/2022/03/sq-3.jpg",
+    img: "images/cake-page/crepecake1.jpg",
   },
   {
-    id: "Butter2",
-    name: "Chocolate Cake",
-    price: 100,
+    id: "Cake2",
+    name: "Strawberry Chesecake",
+    price: 50,
     desc: "ดีที่ไม่เน่า",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-xbbtOjenth-o4vYlvVB_CUXp40wW3CF2pg&usqp=CAU",
+    img: "images/cake-page/cake1.jpeg",
   },
   {
-    id: "Butter3",
-    name: "Crepe Cakes",
-    price: 25,
+    id: "Cake3",
+    name: "Strawberry Creame Cakes",
+    price: 60,
+    desc: "ดีที่ไม่เน่า",
+    img: "images/cake-page/cake2.png",
+  },
+  {
+    id: "Cake4",
+    name: "Matcha mint Crepe Cakes",
+    price: 55,
     desc: "อย่าทิ้งเกิน 2 วันไม่งั้นมดขึ้น",
-    img: "https://img.buzzfeed.com/video-api-prod/assets/bf889412d88f4cfc88748b46b5b72943/fb8.jpg?resize=1200:*",
+    img: "images/cake-page/crepecake3.jpeg",
   },
   {
-    id: "Butter4",
-    name: "Brownny",
-    price: 300,
-    desc: "กินวันนี้ ขี้พน.",
-    img: "https://scontent.xx.fbcdn.net/v/t1.15752-9/307844698_1297173247777551_2711877312343039912_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=aee45a&_nc_ohc=PU0P3RFvM8cAX_D25Vn&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTWipSHqEMLiycKZtzWw6pn6cWiKLJCveKwrqNWXH6zyA&oe=637DB93E",
-  },
-  {
-    id: "Butter5",
-    name: "Cup Cake",
+    id: "Cake5",
+    name: "Rainbow Crepe Cake",
     price: 45,
     desc: "หอมอร่อยมั้ง",
-    img: "https://www.noracooks.com/wp-content/uploads/2022/03/sq-3.jpg",
+    img: "images/cake-page/crepecake5.jpg",
   },
 ];
-
-// page2
-
 
 let icecreamecake = [
   {
     id: "icescreamcake1",
-    name: "Matcha Crepe Cake",
+    name: "Oreo Ice Creame Cake",
     price: 50,
     desc: "หอมหวาน",
-    img: "https://www.indulgewithmimi.com/wp-content/uploads/2018/10/matcha-green-tea-mille-pancake-crepe-cake-japanese-1-735x735.jpg",
+    img: "images/cake-page/ice1.jpg",
   },
   {
     id: "icescreamcake2",
-    name: "Egg Cake",
+    name: "Lemon Ice Creame Cake",
     price: 80,
     desc: "ขนมไข่",
-    img: "https://scontent.xx.fbcdn.net/v/t1.15752-9/308692464_626747699129576_4075605894809072116_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=aee45a&_nc_ohc=L2TXVSKsih8AX9N2oQQ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdSLMQkuagoSlomKCjXpI0w0tnB8FNX629iFoT2tteH2Uw&oe=63844283",
+    img: "images/cake-page/ice2.webp",
   },
   {
     id: "icescreamcake3",
-    name: "Dog pang",
+    name: "Matcha Ice Creame Cake",
     price: 75,
     desc: "ขมปังหน้าหมา",
-    img: "https://pbs.twimg.com/media/Et2M2BAUcAAOCuN.jpg",
+    img: "images/cake-page/ice3.jpeg",
   },
   {
     id: "icescreamcake4",
     name: "Strawberry Cake",
     price: 400,
     desc: "อร่อยลืมเมีย",
-    img: "https://i8b2m3d9.stackpathcdn.com/wp-content/uploads/2020/08/Strawberry_Shortcake_5140sq.jpg",
+    img: "images/cake-page/ice4.webp",
   },
   {
     id: "icescreamcake5",
     name: "Matcha Crepe Cake",
     price: 50,
     desc: "หอมหวาน",
-    img: "https://www.indulgewithmimi.com/wp-content/uploads/2018/10/matcha-green-tea-mille-pancake-crepe-cake-japanese-1-735x735.jpg",
+    img: "images/cake-page/ice5.jpeg",
   }
 ];
 
