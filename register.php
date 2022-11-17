@@ -29,7 +29,7 @@
         /* background: linear-gradient(#ffad00,#e6a319,#cca34d); */
         background-size: cover;
    
-        background-image: url(https://raw.githubusercontent.com/Kenmuraki5/pang-bake.github.io/main/images/image2.jpeg);
+        background-image: url("/images/index-page/image2.jpeg");
         background-repeat:no-repeat;
     }
     .container {
