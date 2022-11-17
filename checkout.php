@@ -93,7 +93,7 @@
                         <div class="form-group row mt-3">
                             <label for="Phone" class="col-sm-2 col-form-label">Phone:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="phone" placeholder="Phone number">
+                                <input type="text" class="form-control" name="phone" placeholder="Phone number" required>
                             </div>
                         </div>
                         <hr>
