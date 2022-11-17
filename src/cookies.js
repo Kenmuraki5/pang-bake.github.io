@@ -45,7 +45,7 @@ let generatecookie = () => {
       let search = basket.find((x) => x.id === id) || [];
       return `
       <div id=product-id-${id} class="item">
-        <a href="detail.html"><img width="100%" alt="${name} "src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)"></a>
+        <a href="detail.html"><img width="100%" height="276px" alt="${name} "src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)"></a>
         <div class="details">
           <h3>${name}</h3>
           <h5 style="color:red;">(7 piece)</h5>
