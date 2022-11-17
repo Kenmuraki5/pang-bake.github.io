@@ -430,7 +430,7 @@ let Bread = [
     name: "MelonPan Bread",
     price: 100,
     desc: "เมล่อนปัง คือลูกครึ่งระหว่างขนมปังกับคุกกี้ ด้านในจะเป็นขนมปังนุ่มๆ ส่วนด้านนอกจะหุ้มด้วยคุกกี้กรอบคลุกน้ำตาล ทำให้มีสัมผัสกรอบนอกนุ่มในอันเป็นเอกลักษณ์",
-    img: "images/bakery-page/bread/MelonPan.jpg",
+    img: "images/bakery-page/bread/Melonpan.jpg",
   },
   {
     id: "bread4",
