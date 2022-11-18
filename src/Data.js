@@ -32,14 +32,14 @@ let neww = [
   {
     id: "new1",
     name: "Blue Berry Cake",
-    price: 50,
+    price: 70,
     desc: "เค้กบูลเบอลี่ ทางร้านจะเน้นรสชาติไปทางหวาน อมเปรี้ยวหน่อยครับ ด้านในจะสอดไส้ด้วยบูลเบอลี่เเละครัมเบิ้ลกรอบๆ เเทรกอยู่ด้านใต้ครับ",
     img: "images/index-page/blueberrycake.jpeg",
   },
   {
     id: "new2",
     name: "Chiffon Butter Cake",
-    price: 80,
+    price: 60,
     desc: "เค้กชีพฟ่อนนุ่มๆ เมนูใหม่ของทางร้านเลยครับ ทำผิดพลาดมาหลายครั้งกว่าจะได้สูตรที่ลงตัวครับผม เชิญรับประทานกันได้เลยครับ",
     img: "images/index-page/chiffon.jpg",
   },
@@ -53,7 +53,7 @@ let neww = [
   {
     id: "new4",
     name: "Croissant Spinach Cream Cheese",
-    price: 400,
+    price: 70,
     desc: "ครัวซองต์ผักโขมชีสตัวนี้ทางร้านได้ใช้เวลาอบโดยประมาณคือ 15 นาที ซึ่งทำให้ครัวซองต์ตัวนี้กรอบนอกนุ่มในชีสยืดๆ ใครทีชอบผักโขมอบชีสเป็นการส่วนตัวอยู่แล้วบอกเลยพลาดไม่ได้กับครัวซองต์ตัวนี้",
     img: "images/index-page/Spinach_Croissant2.webp",
   },
