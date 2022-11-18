@@ -81,22 +81,13 @@ img {
     height: auto;
 }
 
-.info {
-    margin-top: 20px;
-}
-
-.btn-primary {
-    width: 100%;
-
-}
-
 .detail {
     padding-bottom: 5em;
 }
 
 .site-footer {
     background-color: #26272b;
-    padding: 45px 0 20px;
+    padding-top: 10px;
     font-size: 15px;
     line-height: 24px;
     color: #737373;
@@ -121,6 +112,7 @@ img {
 
 .site-footer a {
     color: #737373;
+    padding-top: 11px;
 }
 
 .site-footer a:hover {
@@ -195,7 +187,7 @@ img {
 
 .social-icons li {
     display: inline-block;
-    margin-bottom: 4px
+    margin-bottom: 20px
 }
 
 .social-icons li.title {

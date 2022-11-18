@@ -1,6 +1,6 @@
 let bakery1 = document.getElementById("Bread");
 let bakery2 = document.getElementById("Croissant");
-let bakery3 = document.getElementById("Baguette");
+let bakery3 = document.getElementById("Eclair");
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 let num = 0;
 
@@ -79,7 +79,7 @@ let generatebread = () => {
           <a href="detail.html"><img width="100%" height="300px" alt="${name}" src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)"></a>
           <div class="details">
             <h3>${name}</h3>
-            <h5 style="color:red;">(1 pound)</h5>
+            <h5 style="color:red;">(1 piece)</h5>
             <div class="price-quantity">
               <h2>${price} ฿</h2>
               <div class="buttons">
@@ -103,10 +103,10 @@ let generatebread = () => {
           let search = basket.find((x) => x.id === id) || [];
           return `
           <div id=product-id-${id} class="item">
-            <a href="detail.html"><img width="100%" height="300px" alt="${name}" src=${img} id="${id}" name="${price}" value="${desc}"savedata(this)"></a>
+            <a href="detail.html"><img width="100%" height="300px" alt="${name}" src=${img} id="${id}" name="${price}" value="${desc}"onclick="savedata(this)""></a>
             <div class="details">
               <h3>${name}</h3>
-              <h5 style="color:red;">(1 pound)</h5>
+              <h5 style="color:red;">(1 piece)</h5>
               <div class="price-quantity">
                 <h2>${price} ฿</h2>
                 <div class="buttons">

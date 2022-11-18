@@ -437,21 +437,21 @@ let Croissant = [
   {
     id: "croissant1",
     name: "T-pang Croissant",
-    price: 80,
+    price: 50,
     desc: "ครัวซองต์ ต้นตำหรับ หอม กรอบ สามารถไปต่อยอดทำเมนูต่างๆได้อีกด้วย",
     img: "images/bakery-page/croissant/original.jpg",
   },
   {
     id: "croissant2",
     name: "Matcha Croissant",
-    price: 90,
+    price: 80,
     desc: "ครัวซองต์มัทฉะ กรอบ หอมๆ หวานน้่อยๆ ทานคู่กับชาร้อนๆ เข้ากันได้ดี ทานแล้วเมื่อย้อนกลับไปอยู่ที่แดนอาทิตย์อุทัย",
     img: "images/bakery-page/croissant/matcha.jpg",
   },
   {
     id: "croissant3",
     name: "Chocolate Croissant",
-    price: 100,
+    price: 60,
     desc: "ครัวซองต์ช็อกโกแลต หวานน้อย รสช็อกโกแลตเข้มๆ กรอบ อร่อยทานได้ทุกวัน",
     img: "images/bakery-page/croissant/chocolate.jpg",
   },
@@ -465,7 +465,7 @@ let Croissant = [
   {
     id: "croissant5",
     name: "Strawberry Croissant",
-    price: 45,
+    price: 85,
     desc: "ครัวซองต์สตรอว์เบอร์รี กรอบ หอม หวาน สตรอว์เบอร์รีแท้ๆ จาก ฮอกไกโด",
     img: "images/bakery-page/croissant/strawberry.jpg",
   },
@@ -481,7 +481,7 @@ let Eclair = [
   {
     id: "eclair1",
     name: "Classic Eclair",
-    price: 80,
+    price: 70,
     desc: "คลาสสิคเอแคร์ กรอบ หอม สามารถไปต่อยอดทำเมนูต่างๆได้อีกด้วย",
     img: "images/bakery-page/eclair/classic.jpg"
     ,
@@ -490,7 +490,7 @@ let Eclair = [
   {
     id: "eclair2",
     name: "Chocolate Eclair",
-    price: 90,
+    price: 80,
     desc: "เอแคร์ช็อกโกแล้ต เมนูยอดฮิตของ เอแคร์ ช็อกโกแลตเข้มข้น ทานคู่กับเครื่องดื่ม",
     img: "images/bakery-page/eclair/chocolate.jpg",
   },
