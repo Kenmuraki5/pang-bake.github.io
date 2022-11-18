@@ -369,7 +369,7 @@ let snack = [
   {
     id: "food1",
     name: " Gyudon Beef Rice Bowl",
-    price: 80,
+    price: 100,
     desc: "เป็นอาหารญี่ปุ่นที่ประกอบด้วยชามข้าวราดหน้าด้วยเนื้อวัวและหัวหอมเคี่ยวอย่างอ่อนโยน ซอสหวานปรุงรสด้วยดาชิ (สต๊อกปลาและสาหร่าย ) โชยุและมิริน (ไวน์ข้าว หวาน ) เสิร์ฟพร้อมท็อปปิ้ง เช่น ไข่ดาวน้ำดิบหรือไข่ ลวก หัว หอมเวลส์ ",
     img: "images/snack-page/gyudon.webp",
   },
@@ -383,7 +383,7 @@ let snack = [
   {
     id: "snack3",
     name: "Mathca Moji with Red Bean (3 piece)",
-    price: 400,
+    price: 100,
     desc: "โมจินุ่มๆพร้อมไส้ถั่วเเดงด้านใน อร่อยสดใหม่ทุกวัน",
     img: "images/snack-page/mochi-matcha.jpeg",
   },
@@ -407,7 +407,7 @@ let Bread = [
   {
     id: "bread3",
     name: "MelonPan Bread",
-    price: 100,
+    price: 65,
     desc: "เมล่อนปัง คือลูกครึ่งระหว่างขนมปังกับคุกกี้ ด้านในจะเป็นขนมปังนุ่มๆ ส่วนด้านนอกจะหุ้มด้วยคุกกี้กรอบคลุกน้ำตาล ทำให้มีสัมผัสกรอบนอกนุ่มในอันเป็นเอกลักษณ์",
     img: "images/bakery-page/bread/Melonpan.jpg",
   },
@@ -421,7 +421,7 @@ let Bread = [
   {
     id: "bread5",
     name: "Matcha Bread",
-    price: 45,
+    price: 80,
     desc: "ขนมปังมัทฉะ นุ่ม หอมๆ หวานน้่อยๆ ทานคู่กับชาร้อนๆ เข้ากันได้ดี ทานแล้วเมื่อย้อนกลับไปอยู่ที่แดนอาทิตย์อุทัย",
     img: "images/bakery-page/bread/matchabread.jpg",
   },
