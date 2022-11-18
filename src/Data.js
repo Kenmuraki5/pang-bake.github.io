@@ -38,7 +38,7 @@ let neww = [
   },
   {
     id: "new2",
-    name: "Chiffon Butter Cake",
+    name: "Chiffon Cake",
     price: 60,
     desc: "เค้กชีพฟ่อนนุ่มๆ เมนูใหม่ของทางร้านเลยครับ ทำผิดพลาดมาหลายครั้งกว่าจะได้สูตรที่ลงตัวครับผม เชิญรับประทานกันได้เลยครับ",
     img: "images/index-page/chiffon.jpg",
@@ -52,7 +52,7 @@ let neww = [
   },
   {
     id: "new4",
-    name: "Croissant Spinach Cream Cheese",
+    name: "Croissant Spinach",
     price: 70,
     desc: "ครัวซองต์ผักโขมชีสตัวนี้ทางร้านได้ใช้เวลาอบโดยประมาณคือ 15 นาที ซึ่งทำให้ครัวซองต์ตัวนี้กรอบนอกนุ่มในชีสยืดๆ ใครทีชอบผักโขมอบชีสเป็นการส่วนตัวอยู่แล้วบอกเลยพลาดไม่ได้กับครัวซองต์ตัวนี้",
     img: "images/index-page/Spinach_Croissant2.webp",
