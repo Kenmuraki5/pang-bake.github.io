@@ -52,7 +52,7 @@ let generatemilk = () => {
         <div class="details">
           <h3>${name}</h3>
           <div class="price-quantity">
-            <h2>$ ${price} </h2>
+            <h2>${price} ฿</h2>
             <div class="buttons">
               <div id=${id} class="quantity" style="display:none;">
               ${search.item === undefined ? 0 : search.item}

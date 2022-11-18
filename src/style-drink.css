@@ -115,10 +115,9 @@
   }
   #Juice{
     display: grid;
-    grid-template-columns: repeat(8, 223px);
+    grid-template-columns: repeat(5, 223px);
     gap: 30px;
-    justify-content: left;
-    overflow: scroll;
+    justify-content: center;
   }
   #Tea{
     display: grid;
