@@ -57,7 +57,7 @@ if (empty($_SESSION["Username"])) {
     </nav>
     <div id="log-out">log out</div>
     <div class="container px-6" style="margin-top: 100px;">
-        <div class="row gx-5">
+        <div class="row">
             <div class="col-md-8">
                 <div class="">
                     <h1>Product list</h1>
