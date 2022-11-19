@@ -17,7 +17,7 @@ function show(){
   
 };
 function logout(){
-  localStorage.clear();
+  localStorage.removeItem("Username");
   document.location.reload();
 }
 let login = document.getElementById("login");
